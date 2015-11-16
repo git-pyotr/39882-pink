@@ -6,72 +6,85 @@
   </head>
   <body>
     <header>
-    	<div>PINK</div>
+      <div class="logo">PINK</div>
 
-      <div>
-        <i></i>
-      	<ul>
-      		<li>Информация</li>
-      		<li>Блог</li>
-      		<li>Отзывы</li>
-      		<li>Конкурс</li>
-      	</ul>
+      <div class="main-menu">
+        <i class="hamburger-icon"></i>
+        <ul>
+          <li>Информация</li>
+          <li>Блог</li>
+          <li>Отзывы</li>
+          <li>Конкурс</li>
+        </ul>
       </div>
 
-    	<p>
+    	<p class="contest-promo">
     		Конкурс на самое безбашеное путешествие с Пинк
     	</p>
     </header>
 
-    <form action="#">
-      <p>
+    <form action="#" class="contest-form">
+      <p class="contest-description">
         Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
       </p>
 
-      <div>
+      <div class="participant-name">
         <h3><label for="name">Имя:*</label></h3>
-        <input type="text" placeholder="Введите ваше имя" id="name" required>
+        <input type="text"  class="participant-firstname" placeholder="Введите ваше имя" id="name" required>
 
         <h3><label for="surname">Фамилия:*</label></h3>
-        <input type="text" placeholder="Укажите фамилию" id="surname" required>
+        <input type="text"  class="participant-surname" placeholder="Укажите фамилию" id="surname" required>
 
+<<<<<<< HEAD
         <h3><label for="patronymic">Отчество:*</label></h3>
         <input type="text" placeholder="Ну и отчество тоже" id="patronymic">
+=======
+        <h3><label for="patronymic">Фамилия:*</label></h3>
+        <input type="text"  class="participant-patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+>>>>>>> origin/module1-task2
       </div>
 
-      <div>
+      <div class="participant-app">
         <h3>С каким приложением путешествовали? *</h3>
 
-        <input type="radio" name="app-version" id="ios" checked required>
+        <input type="radio" class="ios-app" name="app-version" id="ios" checked required>
         <label for="ios">Pink для iOS</label>
 
-        <input type="radio" name="app-version" id="android" required>
+        <input type="radio" class="android-app" name="app-version" id="android" required>
         <label for="android">Pink на Android</label>
 
-        <input type="radio" name="app-version" id="winphone" required>
+        <input type="radio" class="winphone-app" name="app-version" id="winphone" required>
         <label for="winphone">Windows Phone</label>
       </div>
 
-      <div>
+      <div class="travel-time">
         <h3>Когда вы путешествовали? *</h3>
 
-        <input type="date" placeholder="1 апреля 2015" id="date-departure" required>
+        <input type="date" class="travel-departure" placeholder="1 апреля 2015" id="date-departure" required>
         <h3><label for="date-departure">Дата выезда</label></h3>
 
+<<<<<<< HEAD
         <input type="number" value="10" id="duration" required>
+=======
+        <input type="number" class="travel-duration" placeholder="10 дней" id="duration" required>
+>>>>>>> origin/module1-task2
         <h3><label for="duration">Продолжительность</label></h3>
 
-        <input type="date" placeholder="1 апреля 2015" id="date-arrival" readonly required>
+        <input type="date" class="travel-arrival" placeholder="1 апреля 2015" id="date-arrival" readonly required>
         <h3><label for="date-arrival">Дата возвращения</label></h3>
       </div>
 
-      <div>
+      <div class="travel-companions">
         <h3><label for="companions-number">Количество попутчиков *</label></h3>
+<<<<<<< HEAD
         <input type="number" value="2" id="companions-number" required>
+=======
+        <input type="number" class="companions-number" placeholder="2 чел" id="companions-number" required>
+>>>>>>> origin/module1-task2
 
         <hr>
         
-        <div>
+        <div class="companion-name">
           <div>
             <h3>№</h3>
             <div>1</div>
@@ -79,14 +92,14 @@
 
           <div>
             <h3><label for="companion-name-1">Имя:*</label></h3>
-            <input type="text" placeholder="Введите ваше имя" id="companion-name-1" required>
+            <input type="text" class="companion-name-1" placeholder="Введите ваше имя" id="companion-name-1" required>
 
             <h3><label for="nickname-1">Прозвище:</label></h3>
-            <input type="text" placeholder="Ну как же без этого!" id="nickname-1">
+            <input type="text" class="companion-nickname-1" placeholder="Ну как же без этого!" id="nickname-1">
           </div>
         </div>
 
-        <div>
+        <div class="companion-name">
           <div>
             <h3>№</h3>
             <div>2</div>
@@ -94,15 +107,15 @@
 
           <div>
             <h3><label for="companion-name-2">Имя:*</label></h3>
-            <input type="text" placeholder="Введите ваше имя" id="companion-name-2" required>
+            <input type="text" class="companion-name-2" placeholder="Введите ваше имя" id="companion-name-2" required>
 
             <h3><label for="nickname-2">Прозвище:</label></h3>
-            <input type="text" placeholder="Ну как же без этого!" id="nickname-2">
+            <input type="text" class="companion-nickname-2" placeholder="Ну как же без этого!" id="nickname-2">
           </div>
         </div>
       </div>
 
-      <div>
+      <div class="travel-achievements">
         <h3>Ваши безбашенные достижения в путешествии</h3>
 
         <input type="checkbox" id="shark" checked>
@@ -124,69 +137,69 @@
         <label for="hotel">Разгромил отель</label>
       </div>
 
-      <div>
+      <div class="travel-photos">
         <h3>Ваши фотографии из поездки *</h3>
 
-        <button type="button">Загрузить фото</button>
+        <button type="button" class="travel-photos-btn">Загрузить фото</button>
 
         <hr>
 
-        <div>
+        <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-1.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-2.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-3.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-4.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-5.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-6.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-7.JPG
         </div>
 
-         <div>
+         <div class="travel-photo">
           <img src="" width="68" height="68">
           IMG-8.JPG
         </div>
       </div>
 
-      <button type="submit">Отправить форму</button>
+      <button type="submit" class="submit-btn">Отправить форму</button>
 
-      <p><span>*</span> — обязательные поля</p>
+      <p class="footnote"><span>*</span> — обязательные поля</p>
     </form>
 
     <footer>
-      <div>Pink</div>
+      <div class="glasses-logo">Pink</div>
 
-      <div>
-        <a href="#">Twitter</a>
-        <a href="#">Facebook</a>
-        <a href="#">Youtube</a>
+      <div class="social">
+        <a href="#" class="twitter-btn">Twitter</a>
+        <a href="#" class="fb-btn">Facebook</a>
+        <a href="#" class="youtube-btn">Youtube</a>
       </div>
 
-      <div>Разработано <a href="https://htmlacademy.ru/"></a></div>
+      <div class="copyright">Разработано <a href="https://htmlacademy.ru/"></a></div>
     </footer>
   </body>
 </html>
