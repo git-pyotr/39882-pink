@@ -5,139 +5,140 @@
     <title>Пинк</title>
   </head>
   <body>
-    <header>
+    <header class="page-header">
       <div class="logo">PINK</div>
 
-      <div class="main-menu">
-        <i class="hamburger-icon"></i>
+      <nav class="main-menu  main-menu--closed">
+        <i class="main-menu__icon main-menu__icon--hamburger"></i>
         <ul>
-          <li>Информация</li>
-          <li>Блог</li>
-          <li>Отзывы</li>
-          <li>Конкурс</li>
+          <li class="main-menu__item"><a href="#">Информация</a></li>
+          <li class="main-menu__item"><a href="#">Блог</a></li>
+          <li class="main-menu__item"><a href="#">Отзывы</a></li>
+          <li class="main-menu__item"><a href="#">Конкурс</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <p class="slogan">
+      <p class="page-header__slogan">
         Взгляните на жизнь иначе!
       </p>
 
-      <div>
-        <a href="#" class="button-download">Скачать приложение</a>
+      <div class="download-app-block">
+        <a href="#" class="download-button">Скачать приложение</a>
 
-        <div>
+        <div class="download-app-block__device-option">
           <a href="#" class="ios-logo">IOS</a>
           <a href="#" class="android-logo">Android</a>
           <a href="#" class="winphone-logo">Windows Phone</a>
-          <p>
+        </div>
+          <p class="download-app-block__description">
             Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
           </p>
-        </div>
       </div>
     </header>
 
-    <section class="about-app">
-      <div>
-        <p class="promo">
+    <section class="about-app-block">
+      <div class="about-app-block__promo">
+        <p class="about-app-block__promo-text">
           Устали от серости мегаполиса?
         </p>
-        <p class="promo">
+        <p class="about-app-block__promo-text">
           Нам есть, что вам предложить!
         </p>
       </div>
 
-      <div class="app-description">
-        <h2>Поднимает настроение</h2>
-        <p>
+      <div class="about-app-block__app-description">
+        <h2 class="about-app-block__description-title">Поднимает настроение</h2>
+        <p class="about-app-block__description-text">
           Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
         </p>
 
-        <h2>Меняет мир вокруг</h2>
-        <p>
+        <h2 class="about-app-block__description-title">Меняет мир вокруг</h2>
+        <p class="about-app-block__description-text">
           Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
         </p>
 
-        <h2>Заводит новых друзей</h2>
-        <p>
+        <h2 class="about-app-block__description-title">Заводит новых друзей</h2>
+        <p class="about-app-block__description-text">
           Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
         </p>
       </div>
     </section>
 
-    <section class="app-feedback">
-      <div>
-        <h2 class="user-name">Николай Петров</h2>
-        <p>
+    <section class="app-reviews">
+      <div class="app-reviews__review">
+        <h2 class="app-reviews__user-name">Николай Петров</h2>
+        <p class="app-reviews__text">
           «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
         </p>
       </div>
-      <div class="slider">
+      <div class="slider-tabs">
         <i></i>
         <i></i>
         <i></i>
       </div>
     </section>
 
-    <section class="app-price">
-      <div>
-        <div>
-          <div>
-            <div class="app-offer">
-              <div class="offer-name">База</div>
-              <div class="offer-price">1,99 usd</div>
-            </div>
-            <div class="app-offer">
-              <div>Хит</div>
-              <div class="offer-name">Стандарт</div>
-              <div class="offer-price">3,99 usd</div>
-            </div>
-            <div class="app-offer">
-              <div class="offer-name">Анлим</div>
-              <div class="offer-price">9,99 usd</div>
-            </div>
+    <section class="app-prices">
+      <div class="app-prices__table">
+        <div class="app-prices__offers-row">
+          <div class="app-prices__offer">
+            <div class="app-prices__offer-name">База</div>
+            <div class="app-prices__offer-price">1,99 usd</div>
           </div>
 
-          <div class="offer-item">
-            <div class="offer-item-included">Розовый фильтр</div>
-            <div class="offer-item-excluded">Розовый фильтр</div>
-            <div class="offer-item-excluded">Розовый фильтр</div>
+          <div class="app-prices__offer">
+            <div class="hit">Хит</div>
+            <div class="app-prices__offer-name">Стандарт</div>
+            <div class="app-prices__offer-price">3,99 usd</div>
           </div>
 
-          <div class="offer-item">
-            <div class="offer-item-included">Смайлики</div>
-            <div class="offer-item-included">Смайлики</div>
-            <div class="offer-item-excluded">Смайлики</div>
-          </div>
-
-          <div class="offer-item">
-            <div class="offer-item-included">Комментарии</div>
-            <div class="offer-item-included">Комментарии</div>
-            <div class="offer-item-included">Комментарии</div>
+          <div class="app-prices__offer">
+            <div class="app-prices__offer-name">Анлим</div>
+            <div class="app-prices__offer-price">9,99 usd</div>
           </div>
         </div>
 
-        <div class="slider">
-          <i></i>
-          <i></i>
-          <i></i>
+
+        <div class="app-prices__offer-item-row">
+          <div class="app-prices__offer-item  app-prices__offer-item--yes">Розовый фильтр</div>
+          <div class="app-prices__offer-item  app-prices__offer-item--yes">Розовый фильтр</div>
+          <div class="app-prices__offer-item  app-prices__offer-item--yes">Розовый фильтр</div>
         </div>
+
+        <div class="app-prices__offer-item-row">
+          <div class="app-prices__offer-item  app-prices__offer-item--no">Смайлики</div>
+          <div class="app-prices__offer-item  app-prices__offer-item--yes">Смайлики</div>
+          <div class="app-prices__offer-item  app-prices__offer-item--yes">Смайлики</div>
+        </div>
+
+        <div class="app-prices__offer-item-row">
+          <div class="app-prices__offer-item  app-prices__offer-item--no">Комментарии</div>
+          <div class="app-prices__offer-item  app-prices__offer-item--no">Комментарии</div>
+          <div class="app-prices__offer-item  app-prices__offer-item--yes">Комментарии</div>
+        </div>
+      </div>
+
+      <div class="slider-tabs">
+        <i></i>
+        <i></i>
+        <i></i>
       </div>
     </section>
 
-    <footer>
-      <p>
+    <footer class="page-footer">
+      <p class="page-footer__promo">
         Остались вопросы? Свяжитесь с нами!
       </p>
 
-      <div class="contacts">
-        <h2>Звоните:</h2>
-        <p class="phone">+7 (812) 555-66-66</p>
+      <div class="page-footer__contacts">
+        <h2 class="page-footer__contacts-title">Звоните:</h2>
+        <p class="page-footer__phone">+7 (812) 555-66-66</p>
 
-        <h2>Пишите:</h2>
-        <p class="email"><a href="#">mail@htmlacademy.ru</a></p>
+        <h2 class="page-footer__contacts-title">Пишите:</h2>
+        <p class="page-footer__email"><a href="#">mail@htmlacademy.ru</a></p>
 
-        <h2>Приезжайте в гости:</h2>
-        <p class="addess">ул. Большая Конюшенная, 19/8</p>
+        <h2 class="page-footer__contacts-title">Приезжайте в гости:</h2>
+        <p class="page-footer__address">ул. Большая Конюшенная, 19/8</p>
       </div>
 
       <div class="map"></div>
