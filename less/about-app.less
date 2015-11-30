@@ -1,0 +1,44 @@
+.about-app{
+  background: @l-grey url(../img/app-display.png) no-repeat center bottom;
+  text-align: center;
+}
+
+.about-app__promo{
+  background: white;
+  padding: 0 10px 65px 10px;
+  margin: 0;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33px;
+    background: linear-gradient(to bottom right, white 50%, @l-grey 50%);
+  }
+}
+
+.about-app__promo-text{
+  font-size: @large-font-size;
+  line-height: round(@large-font-size * 1.2);
+  font-weight: 300;
+  color: @blue-grey;
+  padding: 0;
+  margin: 35px 0 0 0;
+}
+
+.about-app__app-description{
+  padding: 18px 10px 320px 10px;
+  margin: 0;
+}
+
+.about-app__description-title{
+  padding: 0;
+  margin: 32px 0 12px 0;
+}
+
+.about-app__description-text{
+  padding: 0;
+  margin: 0;
+}
