@@ -1,0 +1,76 @@
+.main-menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  background: rgba(0, 0, 0, .3);
+  z-index: 1;
+}
+
+.main-menu__icon{
+  height: 69px;
+
+  &--close{
+    box-shadow: inset 0 -1px darken(@blue-grey, 10%);
+    background: @blue-grey;
+  }
+
+  &--close:before{
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 23px;
+    height: 22px;
+    background: url(../img/icon-close.svg) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  &--hamburger:before{
+    content: '';
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 50px;
+    height: 24px;
+    background: url(../img/icon-hamburger.svg) no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+  }
+}
+
+.main-menu__list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &--closed{
+    display: none;
+  }
+}
+
+.main-menu__item{
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu__link{
+  display: block;
+  padding: (@base-font-size * 1.5) @base-font-size;
+  margin: 0;
+
+  font-size: @h2-font-size;
+  line-height: round((@h2-font-size * 1.8));
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+
+  background: @blue-grey;
+  box-shadow:
+    inset 0 1px lighten(@blue-grey, 10%),
+    inset 0 -1px darken(@blue-grey, 10%);
+}

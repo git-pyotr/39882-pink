@@ -1,0 +1,26 @@
+slider-tabs{
+  font-size: 0;
+  text-align: center;
+}
+
+.slider-tabs__tab{
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  background: @grey;
+  margin-right: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--active{
+    background: white;
+    border: 3px solid @blue-grey;
+    margin-right: 17px;
+    margin-left: -3px;
+  }
+
+  &:last-child{
+    margin-right: 0;
+  }
+}

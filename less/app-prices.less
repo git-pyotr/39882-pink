@@ -1,0 +1,104 @@
+.app-prices{
+  background: @l-grey;
+  padding: 65px 0 45px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.app-prices__wrapper{
+  width: 320px;
+  overflow: hidden;
+  margin:auto;
+  display: block;
+}
+
+.app-prices__table{
+  display: table;
+  margin-bottom: 40px;
+  margin-left:-258px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 828px;
+}
+
+.app-prices__offers-row{
+  display: table-header-group;
+
+}
+
+.app-prices__offer{
+  display: table-cell;
+  border: 2px solid @l-grey;
+  background: @blue-grey;
+  color: white;
+  padding: 22px 0;
+  width: 276px;
+
+  &--hit{
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--hit:before{
+    content: 'Хит';
+    position: absolute;
+    top: 10px;
+    left: -35px;
+
+    font-size: @paragraph-font-size;
+    line-height: @paragraph-font-size;
+    padding: 8px 0;
+    font-weight: 600;
+    width: 120px;
+    color: white;
+    background: @pink;
+    transform: rotate(-45deg);
+  }
+}
+
+.app-prices__offer-name{
+  font-size: @h2-font-size;
+  line-height: @h2-font-size;
+  margin-bottom: 12px;
+}
+
+.app-prices__offer-price{
+  font-size: @large-font-size;
+  line-height: @large-font-size;
+  font-weight: 300;
+}
+
+.app-prices__offer-item-row{
+  display: table-row;
+  background: white;
+  text-align: left;
+}
+
+.app-prices__offer-item{
+  display: table-cell;
+  border: 2px solid @l-grey;
+  font-size: @paragraph-font-size;
+  line-height: @paragraph-font-size;
+  padding: 22px;
+  position: relative;
+
+  &--yes:after{
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 22px;
+    top: 19px;
+    right: 19px;
+    background: url(../img/yes.png) no-repeat;
+  }
+
+  &--no:after{
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 16px;
+    right: 17px;
+    background: url(../img/no.png) no-repeat;
+  }
+}
