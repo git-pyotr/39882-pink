@@ -5,9 +5,16 @@
 }
 
 .page-header__bg-photo{
-  height: 458px;
-  background: url(../img/bg-header.jpg) no-repeat center 0;
-  padding: @base-font-size * 2;
+  padding: 20px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg-header.jpg);
+
+  &--main-page{
+    padding-top: 12px;
+    height: 458px;
+    background-image: url(../img/bg-header-main-page.jpg);
+  }
 }
 
 .page-header__slogan{
@@ -17,6 +24,6 @@
   font-weight: 300;
   color: white;
 
-  padding: 68px 0 0 0;
+  padding: 75px 0 35px 0;
   margin: 0;
 }
