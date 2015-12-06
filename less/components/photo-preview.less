@@ -1,0 +1,28 @@
+.photo-preview{
+  position: relative;
+  width: 68px;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: @base-font;
+  font-weight: 400;
+  color: @blue-grey;
+  text-transform: uppercase;
+  margin: 0 0 20px 36px;
+  padding: 0;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 52px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid @border-grey;
+    border-radius: 50%;
+    background-image: url(../img/cross-grey.png);
+    background-position: center;
+    background-color: white;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}

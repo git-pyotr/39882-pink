@@ -1,0 +1,23 @@
+.input{
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid @border-grey;
+  padding: 15px 22px;
+  margin: 0;
+  font-family: @base-font;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @blue-grey;
+
+  &--number{
+    text-align: center;
+    width: 157px;
+    flex-shrink: 1;
+    flex-grow: 100;
+  }
+
+  &[readonly]{
+    background-color: @l-grey;
+  }
+}
