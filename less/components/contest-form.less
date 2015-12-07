@@ -4,7 +4,7 @@
 }
 
 .contest-form__description{
-  margin: 0 0 -35px 0;
+  margin-bottom: -35px;
 }
 
 .contest-form__title{
@@ -44,7 +44,7 @@
 .contest-form__fieldset{
   padding-bottom: 25px;
 
-  &:first-of-type{
+  &--name{
     padding-bottom: 45px;
   }
 
@@ -75,6 +75,10 @@
   padding-left: 60px;
   margin-bottom: 45px;
   cursor: pointer;
+}
+
+.contest-form__call{
+  display: none;
 }
 
 .contest-form__input-number{
@@ -146,6 +150,10 @@
   flex-grow: 1000;
 }
 
+.contest-form__delete{
+  display: none;
+}
+
 .contest-form__separator{
   margin: 35px 0;
   padding: 0;
@@ -175,4 +183,148 @@
 
 .contest-form__footnote-asterisk{
   color: @pink;
+}
+
+@media (min-width:@screen-sm) {
+
+  .contest-form{
+    padding-top: 100px;
+  }
+
+  .contest-form__description{
+    width: 490px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: auto;
+  }
+
+  .contest-form__offer{
+    display: inline;
+  }
+
+  .contest-form__fieldset{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-bottom: 65px;
+    border: 2px solid @border-grey;
+    padding-top: 0;
+    text-align: center;
+
+    & .container{
+      margin: 0 9.7%;
+    }
+
+    &--name{
+      border: none;
+      margin-left: -4.6%;
+      margin-right: -4.6%;
+      padding-bottom: 0;
+    }
+
+    &--date{
+      padding-bottom: 15px;
+    }
+
+    &--companions{
+      padding-bottom: 35px;
+    }
+
+    &--submit{
+      border: none;
+      margin-left: -4.6%;
+      margin-right: -4.6%;
+      margin-bottom: 0;
+
+      & .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+      }
+    }
+
+    &--even{
+      background: white;
+      padding-top: 0;
+    }
+
+    &--odd{
+      padding-top: 0;
+    }
+  }
+
+  .contest-form__title{
+
+    &--fieldset-title{
+      display: inline-block;
+      position: relative;
+      top: -9px;
+      margin: auto;
+      margin-bottom: 25px;
+      padding: 0 20px;
+      background: white;
+    }
+  }
+
+  .contest-form__inputs{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contest-form__input-group{
+    width: 48%;
+  }
+
+  .contest-form__input-description{
+    text-align: left;
+  }
+
+  .contest-form__input-number{
+
+    &--companion{
+
+      width: 50%;
+
+      & .input[readonly]{
+        border-top: none;
+        border-bottom: none;
+        background: white;
+      }
+    }
+  }
+
+  .contest-form__companion-number-block{
+    margin-right: 4%;
+  }
+
+  .contest-form__companion-number{
+    border-right: 2px solid @border-grey;
+  }
+
+  .contest-form__delete{
+    display: block;
+    margin-top: 80px;
+    margin-left: 11%;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+  }
+
+  .contest-form__separator{
+    margin-top: 40px;
+    margin-bottom: 65px;
+  }
+
+  .contest-form__photo-preview{
+    margin-left: -66px;
+  }
+
+  .contest-form__footnote{
+    margin: 0;
+    align-self: center;
+    width: 50%;
+    flex-shrink: 0;
+    text-align: right;
+  }
 }
