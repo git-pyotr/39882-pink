@@ -1,13 +1,14 @@
 .about-app{
-  background: @l-grey url(../img/app-display.png) no-repeat center bottom;
+  background: @l-grey;
   text-align: center;
 }
 
 .about-app__promo{
   background: white;
-  padding: 0 10px 65px 10px;
+  padding-bottom: 65px;
   margin: 0;
   position: relative;
+
   &:after{
     content: '';
     position: absolute;
@@ -25,20 +26,78 @@
   font-weight: 300;
   color: @blue-grey;
   padding: 0;
-  margin: 35px 0 0 0;
+  margin-top: 35px;
 }
 
 .about-app__app-description{
-  padding: 18px 10px 320px 10px;
+  padding-top: 35px;
   margin: 0;
+  font-size: 0;
 }
 
 .about-app__description-title{
   padding: 0;
-  margin: 32px 0 12px 0;
+  margin-top: 15px;
+  margin-bottom: 12px;
 }
 
 .about-app__description-text{
   padding: 0;
-  margin: 0;
+  margin-bottom: 35px;
+}
+
+.about-app__iphone{
+  display: block;
+  width: 158px;
+  height: 278px;
+  margin: auto;
+}
+
+//media
+
+@media (min-width: @screen-sm) {
+  .about-app__promo{
+    padding-top: 55px;
+    padding-bottom: 105px;
+    
+    &:after{
+      height: 55px;
+    }
+  }
+  
+  .about-app__promo-text{
+    font-size: 40px;
+    line-height: 1.2em;
+    margin: 0;
+    
+    &:last-of-type{
+      width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .about-app__app-description{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .about-app__description-title{
+    margin-left: 310px;
+    text-align: left;
+  }
+  
+  .about-app__description-text{
+    margin-left: 310px;
+    text-align: left;
+  }
+  
+  .about-app__iphone{
+    position: absolute;
+    width: 268px;
+    height: 481px;
+    left: 0;
+    bottom: -45px;
+  }
 }

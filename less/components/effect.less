@@ -1,0 +1,66 @@
+.effect{
+  background: white;
+}
+
+.effect__timer{
+  position: absolute;
+  width: 262px;
+  height: 302px;
+  bottom: 0;
+  left: 0;
+  background: url(../img/timer.svg);
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  text-align: center;
+  
+  &:before{
+    content: "24";
+    position: absolute;
+    font-size: 105px;
+    line-height: 1em;
+    font-weight: 700;
+    padding-top: 40px;
+    color: @pink;
+    background-color: white;
+    width: 215px;
+    height: 215px;
+    box-sizing: border-box;
+    left: 24px;
+    bottom: 24px;
+    border: 10px solid @pink;
+    border-radius: 50%;
+  }
+}
+
+.effect__title{
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 100px;
+  margin-bottom: 15px;
+  margin-left: 310px;
+  padding: 0;
+}
+
+.effect__text{
+  text-align: left;
+  margin-left: 310px;
+  margin-bottom: 15px;
+  padding: 0;
+  
+  &:last-of-type{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.effect__link{
+  color: @pink;
+}
+
+@media (max-width: @screen-sm) {
+  .effect{
+    display: none;
+  }
+}

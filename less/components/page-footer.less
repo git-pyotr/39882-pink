@@ -7,14 +7,14 @@
   font-size: @large-font-size;
   line-height: round((@large-font-size * 1.2));
   font-weight: 300;
-  padding: 0 20px 40px 20px;
+  padding-bottom: 40px;
   margin: 0;
   background: white;
 }
 
 .page-footer__contacts{
   background: white;
-  padding: 0 0 20px 0;
+  padding-bottom: 20px;
   position: relative;
 
   &:before{
@@ -35,12 +35,13 @@
     left: 0;
     bottom: -35px;
     background: linear-gradient(to top right, transparent 50%, white 50%);
+    background-size: contain;
   }
 }
 
 .page-footer__contacts-title{
   padding: 0;
-  margin: 0 10px 5px 10px;
+  margin-bottom: 5px;
 }
 
 .page-footer__contacts-text{
@@ -48,7 +49,7 @@
   font-size: @large-font-size;
   line-height:  round((@large-font-size * 1.2));
   font-weight: 300;
-  padding: 0 20px 20px 20px;
+  padding-bottom: 20px;
   margin: 0;
 
   & a{
@@ -58,6 +59,77 @@
 }
 
 .map{
-  background: url(../img/bg-map.jpg) no-repeat center bottom;
+  background: url(../img/map.png) no-repeat center bottom;
   height: 200px;
+}
+
+@media (min-width: @screen-sm) {
+  .page-footer__promo{
+    font-size: 40px;
+    line-height: 1.2em;
+    padding-bottom: 0;
+  }
+  
+  .page-footer__contacts{
+    
+    & .container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      font-size: 0;
+      align-content: flex-start;
+      z-index: 10;
+    }
+    
+    &:before{
+      height: 70px;
+      bottom: -70px;
+      z-index: 1;
+    }
+    
+    &:after{
+      height: 70px;
+      bottom: -70px;
+      z-index: 2;
+    }
+  }
+  
+  .page-footer__contacts-item{
+    width: 240px;
+    margin-top: 50px;
+  }
+  
+  .page-footer__contacts-title{
+    margin-top: 0;
+  }
+  
+  .page-footer__contacts-text{
+    padding-bottom: 0;
+  }
+  
+  .map{
+    height: 380px;
+    background-position-y: -340px;
+    background-size: cover;
+  }
+  
+  .page-footer__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: baseline;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    
+    .container();
+    
+    & div{
+      margin: 0;
+    }
+    
+    & div:last-of-type{
+      align-self: center;
+    }
+  }
 }
