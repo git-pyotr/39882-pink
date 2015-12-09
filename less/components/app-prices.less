@@ -6,17 +6,18 @@
 }
 
 .app-prices__wrapper{
-  width: 320px;
+  width: 100%;
   overflow: hidden;
   margin:auto;
 }
 
 .app-prices__table{
   display: table;
+  position: relative;
+  left: 50%;
   margin-bottom: 40px;
-  margin-left:-258px;
+  margin-left:-415px;
   border-collapse: collapse;
-  table-layout: fixed;
   width: 828px;
 }
 
@@ -127,16 +128,16 @@
   }
   
   .app-prices__wrapper{
+    
     width: auto;
     
     .container();
   }
   
   .app-prices__table{
+    position: static;
     width: 100%;
-    margin-left: 0;
-    margin-bottom: 0;
-    table-layout: auto;
+    margin: 0;
   }
   
   .app-prices__offer{
@@ -158,13 +159,13 @@
   
   .app-prices__offer-name{
     font-size: 16px;
-    line-height: 16px;
+    line-height: 1em;
     margin-bottom: 10px;
   }
   
   .app-prices__offer-price{
     font-size: 18px;
-    line-height: 18px;
+    line-height: 1em;
   }
   
   .app-prices__offer-item{
@@ -192,5 +193,42 @@
     line-height: 15px;
     text-transform: none;
     padding: 15px;
+  }
+}
+
+@media (min-width: @screen-lg) {
+  
+  .app-prices{
+    padding-top: 60px;
+    padding-bottom: 95px;
+  }
+  
+  .app-prices__wrapper{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .app-prices__offer-item{
+    
+    &--name{
+      font-size: 18px;
+      line-height: 1em;
+      padding: 20px;
+    }
+  }
+  
+  .app-prices__offer{
+    padding-top: 23px;
+    padding-bottom: 21px;
+  }
+  
+  .app-prices__offer-name{
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .app-prices__offer-price{
+    font-size: 24px;
   }
 }

@@ -6,7 +6,7 @@
 
 .page-header__bg-photo{
   background-image: url(../img/background-mobile@1x.jpg);
-  background-size: 700px 488px;
+  background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   text-align: center;
@@ -60,7 +60,6 @@
     box-sizing: border-box;
     position: relative;
     background-image: url(../img/background-tablet@1x.jpg);
-    background-size: 1200px 729px;
 
     &--main-page{
       min-height: 730px;
@@ -103,5 +102,38 @@
     width: 700px;
     height: 545px;
     margin-left: -350px;
+  }
+}
+
+@media (min-width: @screen-lg) {
+  
+  .page-header__bg-photo{
+    background-image: url(../img/background-fullsize.jpg);
+    
+    &--main-page{
+      min-height: 854px;
+    }
+  }
+  
+  .page-header__wrapper{
+    width: 940px;
+    margin: auto;
+  }
+  
+  .page-header__slogan{
+    font-size: 50px;
+    line-height: 1.2em;
+    
+    &--main-page{
+      width: 280px;
+      padding-top: 230px;
+      margin-right: 100%;
+    }
+  }
+  
+  .page-header__iphone{
+    width: 1050px;
+    height: 645px;
+    margin-left: -460px;
   }
 }
