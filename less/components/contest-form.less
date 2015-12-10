@@ -179,6 +179,10 @@
   text-transform: uppercase;
   margin-top: 40px;
   padding: 0;
+
+  &--hide{
+      display: none;
+    }
 }
 
 .contest-form__footnote-asterisk{
@@ -326,5 +330,145 @@
     width: 50%;
     flex-shrink: 0;
     text-align: right;
+  }
+}
+
+@media (min-width:@screen-lg) {
+
+  .contest-form{
+    width: 940px;
+    margin: 0 auto;
+  }
+
+  .contest-form__fieldset{
+    margin-left: 0;
+    margin-right: 0;
+
+    & .container{
+      width: auto;
+      margin: 0 58px;
+    }
+
+    &--name{
+
+    & .container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: flex-start;
+      margin: 0;
+    }
+  }
+
+    &--device{
+      padding-bottom: 12px;
+
+      & .contest-form__title{
+        margin-bottom: 12px;
+      }
+    }
+
+    &--date{
+      padding-bottom: 0;
+    }
+
+    &--companions{
+      padding-bottom: 60px;
+    }
+
+    &--achievments{
+      padding-bottom: 15px;
+    }
+
+    &--submit{
+      & .container{
+      width: auto;
+      margin: 0;
+      }
+    }
+  }
+
+  .contest-form__description{
+    width: 760px;
+    margin-bottom: 45px;
+  }
+
+  .contest-form__input-name{
+    width: 296px;
+  }
+
+  .contest-form__input-device{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 30px;
+  }
+
+  .contest-form__input-group{
+    width: 245px;
+  }
+
+  .contest-form__input-number--companion{
+    width: 248px;
+  }
+
+  .contest-form__companion-name{
+    margin-bottom: 0;
+  }
+
+  .contest-form__companion-number-block{
+    margin-right: 24px;
+  }
+
+  .contest-form__companion-name-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .contest-form__input-wrapper{
+    width: 296px;
+    margin-right: 24px;
+  }
+
+  .contest-form__delete{
+    margin-left: 30px;
+  }
+
+  .contest-form__iput-achievments{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: space-between;
+    height: 160px;
+    margin-top: 10px;
+  }
+
+  .contest-form__input-description{
+
+    &:first-of-type {
+       margin-top: 0 !important;
+    }
+
+    &:last-of-type {
+       margin-bottom: 45px !important;
+    }
+  }
+
+  .contest-form__photo-preview{
+    margin-left: -55px;
+    padding-bottom: 25px;
+  }
+
+  .contest-form__footnote{
+    width: 640px;
+
+    &--hide{
+      display: inline;
+    }
   }
 }

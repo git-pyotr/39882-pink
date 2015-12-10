@@ -16,6 +16,7 @@
   background: white;
   padding-bottom: 20px;
   position: relative;
+  z-index: 10;
 
   &:before{
     content: '';
@@ -59,9 +60,25 @@
 }
 
 .map{
-  background: url(../img/map.png) no-repeat center;
+  background: url(../img/map.jpg) no-repeat center;
   background-size: cover;
   height: 200px;
+  position: relative;
+  z-index: 1;
+
+  &:before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px;
+    background: @pink;
+    border: 10px solid white;
+    border-radius: 50%;
+  }
 }
 
 //media
@@ -145,48 +162,56 @@
   .page-footer{
     padding-top: 75px;
   }
-  
+
   .page-footer__contacts{
     padding-bottom: 0;
-    
+
     &:before{
       height: 125px;
       bottom: -125px;
     }
-    
+
     &:after{
       height: 125px;
       bottom: -125px;
     }
   }
-  
+
   .page-footer__promo{
     font-size: 50px;
     line-height: 1.2em;
   }
-  
+
   .page-footer__contacts-item{
     margin-top: 60px;
-    
+
     &:last-of-type{
       order: 2;
     }
-    
+
     &:nth-of-type(2){
       order: 3;
     }
   }
-  
+
   .page-footer__contacts-title{
     margin-bottom: 25px;
   }
-  
+
   .map{
     height: 520px;
   }
-  
+
   .page-footer__wrapper{
-    padding-top: 75px;
-    padding-bottom: 70px;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 80px;
+
+    &--main-page{
+      padding-top: 75px;
+      padding-bottom: 70px;
+    }
   }
 }
