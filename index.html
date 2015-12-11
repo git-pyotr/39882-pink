@@ -2,83 +2,148 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>Пинк</title>
   </head>
   <body>
     <header class="page-header">
-      <div class="logo">PINK</div>
+
+      <nav class="main-menu  main-menu--closed">
+        <div class="container">
+          <a href="index.html" class="logo">PINK</a>
+          <i class="main-menu__icon"></i>
+        </div>
+
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Информация</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Блог</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Отзывы</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Конкурс</a></li>
+        </ul>
+      </nav>
 
       <div class="page-header__bg-photo  page-header__bg-photo--main-page">
-        <nav class="main-menu">
-          <div class="main-menu__icon main-menu__icon--hamburger"></div>
-          <ul class="main-menu__list main-menu__list--closed">
-            <li class="main-menu__item"><a href="#" class="main-menu__link">Информация</a></li>
-            <li class="main-menu__item"><a href="#" class="main-menu__link">Блог</a></li>
-            <li class="main-menu__item"><a href="#" class="main-menu__link">Отзывы</a></li>
-            <li class="main-menu__item"><a href="#" class="main-menu__link">Конкурс</a></li>
-          </ul>
-        </nav>
-
-        <p class="page-header__slogan">
-          Взгляните на жизнь иначе!
-        </p>
-      </div>
-
-      <div class="download-app">
-        <a href="#" class="download-btn">Скачать приложение</a>
-
-        <div class="download-app__device-option">
-          <a href="#" class="ios-logo">IOS</a>
-          <a href="#" class="android-logo">Android</a>
-          <a href="#" class="winphone-logo">Windows Phone</a>
-        </div>
-          <p class="download-app__description">
-            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        <div class="page-header__wrapper">
+          <p class="page-header__slogan  page-header__slogan--main-page">
+            Взгляните на жизнь иначе!
           </p>
+        </div>
+
+          <picture class="page-header__iphone">
+            <source media="(max-width:479px)"
+              srcset="img/iphone-hand-mobile@2x.png 2x, img/iphone-hand-mobile@3x.png 3x">
+
+            <source media="(min-width:480px)"
+              srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+
+            <source media="(min-width:960px)"
+              srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+
+            <img src="img/iphone-hand-mobile.png" alt="Экран приложения" height="100%">
+          </picture>
+
+        <div class="download-app">
+          <div class="page-header__wrapper">
+              <a href="#" class="download-btn">Скачать приложение</a>
+
+              <div class="download-app__device-option">
+                <a href="#" class="ios-logo">IOS</a>
+                <a href="#" class="android-logo">Android</a>
+                <a href="#" class="winphone-logo">Windows Phone</a>
+              </div>
+
+              <p class="download-app__description">
+                Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+              </p>
+          </div>
+        </div>
       </div>
     </header>
 
     <section class="about-app">
       <div class="about-app__promo">
-        <p class="about-app__promo-text">
-          Устали от серости мегаполиса?
-        </p>
-        <p class="about-app__promo-text">
-          Нам есть, что вам предложить!
-        </p>
+        <div class="container">
+          <p class="about-app__promo-text">
+            Устали от серости мегаполиса?
+          </p>
+
+          <p class="about-app__promo-text">
+            Нам есть, что вам предложить!
+          </p>
+        </div>
       </div>
 
       <div class="about-app__app-description">
-        <h2 class="about-app__description-title">Поднимает настроение</h2>
-        <p class="about-app__description-text">
-          Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
+        <div class="container">
+          <div class="about-app__description-item">
+            <h2 class="about-app__description-title">Поднимает настроение</h2>
+            <p class="about-app__description-text">
+              Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
+            </p>
+          </div>
+
+          <div class="about-app__description-item">
+            <h2 class="about-app__description-title">Меняет мир вокруг</h2>
+            <p class="about-app__description-text">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+            </p>
+          </div>
+
+          <div class="about-app__description-item">
+            <h2 class="about-app__description-title">Заводит новых друзей</h2>
+            <p class="about-app__description-text">
+              Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+            </p>
+          </div>
+
+          <picture class="about-app__iphone">
+
+            <source media="(min-width:480px)"
+              srcset="img/iphone-screen-tablet-3@1x.png 1x, img/iphone-screen-tablet-3@2x.png 2x">
+
+            <source media="(min-width:960px)"
+              srcset="img/iphone-screen-desktop-3@1x.png 1x, img/iphone-screen-desktop-3@2x.png 2x">
+
+            <img src="img/screen-mobile-3.png" alt="Экран приложения" width="100%" height="auto">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="effect">
+      <div class="container">
+        <div class="effect__timer"></div>
+
+        <h2 class="effect__title">Эффект <br>на 24 часа!</h2>
+
+        <p class="effect__text">
+          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
         </p>
 
-        <h2 class="about-app__description-title">Меняет мир вокруг</h2>
-        <p class="about-app__description-text">
-          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        </p>
-
-        <h2 class="about-app__description-title">Заводит новых друзей</h2>
-        <p class="about-app__description-text">
-          Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
+        <p class="effect__text">
+          <a href="#" class="effect__link">Узнать больше об исследовании</a>
         </p>
       </div>
     </section>
 
     <section class="app-reviews">
-      <div class="app-reviews__review">
-        <h2 class="app-reviews__user-name">Николай Петров</h2>
-        <p class="app-reviews__text">
-          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-        </p>
-      </div>
-      <div class="slider-tabs">
-        <i class="slider-tabs__tab  slider-tabs__tab--active"></i>
-        <i class="slider-tabs__tab"></i>
-        <i class="slider-tabs__tab"></i>
+      <div class="container">
+        <div class="app-reviews__review">
+          <h2 class="app-reviews__user-name">Николай Петров</h2>
+
+          <p class="app-reviews__about-user">25 лет, водитель трамвая</p>
+
+          <p class="app-reviews__text">
+            <span class="app-reviews__quotes">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="app-reviews__quotes">»</span>
+          </p>
+        </div>
+
+        <div class="slider-tabs">
+          <i class="slider-tabs__tab  slider-tabs__tab--active"></i>
+          <i class="slider-tabs__tab"></i>
+          <i class="slider-tabs__tab"></i>
+        </div>
       </div>
     </section>
 
@@ -86,6 +151,8 @@
       <div class="app-prices__wrapper">
         <div class="app-prices__table">
           <div class="app-prices__offers-row">
+            <div class="app-prices__offer  app-prices__offer--invisible"></div>
+
             <div class="app-prices__offer">
               <div class="app-prices__offer-name">База</div>
               <div class="app-prices__offer-price">1,99 usd</div>
@@ -104,18 +171,21 @@
 
 
           <div class="app-prices__offer-item-row">
+            <div class="app-prices__offer-item  app-prices__offer-item--name">Розовый фильтр</div>
             <div class="app-prices__offer-item  app-prices__offer-item--yes">Розовый фильтр</div>
             <div class="app-prices__offer-item  app-prices__offer-item--yes">Розовый фильтр</div>
             <div class="app-prices__offer-item  app-prices__offer-item--yes">Розовый фильтр</div>
           </div>
 
           <div class="app-prices__offer-item-row">
+            <div class="app-prices__offer-item  app-prices__offer-item--name">Смайлики</div>
             <div class="app-prices__offer-item  app-prices__offer-item--no">Смайлики</div>
             <div class="app-prices__offer-item  app-prices__offer-item--yes">Смайлики</div>
             <div class="app-prices__offer-item  app-prices__offer-item--yes">Смайлики</div>
           </div>
 
           <div class="app-prices__offer-item-row">
+            <div class="app-prices__offer-item  app-prices__offer-item--name">Комментарии</div>
             <div class="app-prices__offer-item  app-prices__offer-item--no">Комментарии</div>
             <div class="app-prices__offer-item  app-prices__offer-item--no">Комментарии</div>
             <div class="app-prices__offer-item  app-prices__offer-item--yes">Комментарии</div>
@@ -123,30 +193,57 @@
         </div>
       </div>
 
-      <div class="slider-tabs">
-        <i class="slider-tabs__tab"></i>
-        <i class="slider-tabs__tab   slider-tabs__tab--active"></i>
-        <i class="slider-tabs__tab"></i>
+      <div class="container">
+        <div class="slider-tabs">
+          <i class="slider-tabs__tab"></i>
+          <i class="slider-tabs__tab   slider-tabs__tab--active"></i>
+          <i class="slider-tabs__tab"></i>
+        </div>
       </div>
     </section>
 
     <footer class="page-footer">
-      <p class="page-footer__promo">
-        Остались вопросы? Свяжитесь с нами!
-      </p>
+      <div class="container">
+        <p class="page-footer__promo">
+          Остались вопросы?<br>Свяжитесь с нами!
+        </p>
+      </div>
 
       <div class="page-footer__contacts">
-        <h2 class="page-footer__contacts-title">Звоните:</h2>
-        <p class="page-footer__contacts-text">+7 (812) 555-66-66</p>
+        <div class="container">
+          <div class="page-footer__contacts-item">
+            <h2 class="page-footer__contacts-title">Звоните:</h2>
+            <p class="page-footer__contacts-text">+7 (812) 555-66-66</p>
+          </div>
 
-        <h2 class="page-footer__contacts-title">Пишите:</h2>
-        <p class="page-footer__contacts-text"><a href="#">mail@htmlacademy.ru</a></p>
+          <div class="page-footer__contacts-item">
+            <h2 class="page-footer__contacts-title">Пишите:</h2>
+            <p class="page-footer__contacts-text"><a href="#">mail@htmlacademy.ru</a></p>
+          </div>
 
-        <h2 class="page-footer__contacts-title">Приезжайте в гости:</h2>
-        <p class="page-footer__contacts-text">ул. Большая Конюшенная, 19/8</p>
+          <div class="page-footer__contacts-item">
+            <h2 class="page-footer__contacts-title">Приезжайте в гости:</h2>
+            <p class="page-footer__contacts-text">ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div>
       </div>
 
       <div class="map"></div>
+
+      <div class="page-footer__wrapper  page-footer__wrapper--main-page">
+        <div class="glasses-logo">Pink</div>
+
+        <div class="social">
+          <a href="#" class="social-btn  social-btn--twitter">Twitter</a>
+          <a href="#" class="social-btn  social-btn--fb">Facebook</a>
+          <a href="#" class="social-btn  social-btn--youtube">Youtube</a>
+        </div>
+
+        <div class="copyright">
+          Разработано
+          <a href="https://htmlacademy.ru/" class="htmlacademy-icon"></a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
