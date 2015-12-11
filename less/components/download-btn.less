@@ -1,6 +1,10 @@
 .download-btn{
   display: block;
   padding: 15px 10px;
+  width: 280px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 
   font-size: @h2-font-size;
   line-height: @h2-font-size;
@@ -11,4 +15,10 @@
 
   border: 3px solid white;
   border-radius: (@h2-font-size * 2);
+}
+
+@media (min-width: @screen-lg) {
+  .download-btn{
+    margin-right: 100%;
+  }
 }
