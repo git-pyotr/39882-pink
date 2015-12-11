@@ -3,52 +3,54 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 66px;
-  background: rgba(0, 0, 0, .3);
-  z-index: 1;
+  height: 69px;
+  background: @blue-grey;
+  box-shadow: inset 0 -1px darken(@blue-grey, 10%);
+  z-index: 100;
+  
+  &--closed{
+    background: rgba(0, 0, 0, .3);
+    box-shadow: none;
+    height: 66px;
+    
+    & .main-menu__icon:before{
+      content: '';
+      position: absolute;
+      top: 22px;
+      right: 0;
+      width: 50px;
+      height: 24px;
+      background: url(../img/menu-burger.svg) no-repeat center;
+      background-size: contain;
+      cursor: pointer;
+    }
+    
+    & .main-menu__list{
+      display: none;
+    }
+  }
 }
 
 .main-menu__icon{
-  height: 69px;
-
-  &--close{
-    box-shadow: inset 0 -1px darken(@blue-grey, 10%);
-    background: @blue-grey;
-  }
-
-  &--close:before{
+  
+  &:before{
     content: '';
     position: absolute;
     top: 22px;
-    right: 20px;
+    right: 0;
     width: 23px;
     height: 22px;
-    background: url(../img/icon-close.svg) no-repeat center;
+    background: url(../img/menu-cross.svg) no-repeat center;
     background-size: contain;
     cursor: pointer;
   }
 
-  &--hamburger:before{
-    content: '';
-    position: absolute;
-    top: 22px;
-    right: 20px;
-    width: 50px;
-    height: 24px;
-    background: url(../img/icon-hamburger.svg) no-repeat center;
-    background-size: contain;
-    cursor: pointer;
-  }
 }
 
 .main-menu__list{
   list-style: none;
   padding: 0;
-  margin: 0;
-
-  &--closed{
-    display: none;
-  }
+  margin-top: 69px;
 }
 
 .main-menu__item{
@@ -73,4 +75,53 @@
   box-shadow:
     inset 0 1px lighten(@blue-grey, 10%),
     inset 0 -1px darken(@blue-grey, 10%);
+}
+
+@media (min-width: @screen-sm) {
+  .main-menu{
+    background: @blue-grey;
+    height: 110px;
+  
+  .main-menu__list{
+        margin-top: 110px;
+      }
+    
+  &--closed{
+    background: rgba(0, 0, 0, .3);
+    box-shadow: none;
+  }
+    
+    & .main-menu__icon:before{
+      top: 44px;
+    }
+  }
+}
+
+@media (min-width: @screen-lg) {
+  
+  .main-menu--closed{
+    
+    .main-menu__list{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-content: center;
+      width: 940px;
+      margin: 31px auto;
+    }
+  }
+  
+  .main-menu__icon{
+    display: none;
+  }
+  
+  .main-menu__link{
+    font-size: 18px;
+    line-height: 1em;
+    font-weight: 400;
+    text-transform: none;
+    background: transparent;
+    box-shadow: none;
+    margin-left: 70px;
+  }
 }
