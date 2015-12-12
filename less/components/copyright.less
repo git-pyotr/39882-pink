@@ -13,8 +13,27 @@
   vertical-align: middle;
   width: 27px;
   height: 34px;
-  background-image: url(../img/icon-htmlacademy.png);
+  background-image: url(../img/htmlacademy-pink.svg);
   background-repeat: no-repeat;
   background-position: center;
+  
+  &:hover{
+    background-image: url(../img/htmlacademy-grey.svg);
+  }
+  
+  &:active{
+    opacity: .3;
+  }
+}
 
+@media (min-width: @screen-sm) {
+  .copyright{
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @screen-lg) {
+  .copyright{
+    font-size: 18px;
+  }
 }

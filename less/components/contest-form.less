@@ -99,17 +99,31 @@
   background-repeat: no-repeat;
   flex-shrink: 0;
   flex-grow: 1;
+  
+  &:hover{
+    border-color: @blue-grey;
+  }
+  
+  &:active{
+    background-color: @blue-grey;
+  }
 
   &--minus{
-    background-image: url(../img/icon-minus.png);
+    background-image: url(../img/minus.png);
     background-size: 27px 3px;
-    border-right: none;
+    
+    &:active{
+      background-image: url(../img/minus-white.png);
+    }
   }
 
   &--plus{
-    background-image: url(../img/icon-plus.png);
+    background-image: url(../img/plus.png);
     background-size: 27px 27px;
-    border-left: none;
+    
+    &:active{
+      background-image: url(../img/plus-white.png);
+    }
   }
 }
 
@@ -152,6 +166,16 @@
 
 .contest-form__delete{
   display: none;
+  
+  &:hover{
+    color: @pink;
+    text-decoration: underline;
+  }
+  
+  &:active{
+    opacity: .3;
+    text-decoration: none;
+  }
 }
 
 .contest-form__separator{
