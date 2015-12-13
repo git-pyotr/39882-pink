@@ -30,14 +30,14 @@
     var input = minusBtn[0].nextElementSibling;
     var num = parseInt(input.value, 10);
 
-    
+
     if (num >= 4) {
       input.value = ++num + " дней";
     } else {
       input.value = ++num + " дня";
       minusBtn[0].classList.remove('contest-form__number-change-btn--disable');
       minusBtn[0].classList.add('contest-form__number-change-btn--minus');
-    } 
+    }
   });
 
 
