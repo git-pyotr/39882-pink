@@ -8,16 +8,33 @@ slider-tabs{
   vertical-align: middle;
   width: 6px;
   height: 6px;
-  background: @grey;
+  background: fade(@blue-grey, 30%);
   margin-right: 20px;
   border-radius: 50%;
   cursor: pointer;
 
+  &:hover{
+    background: @blue-grey;
+  }
+  
+  &:active{
+    background: fade(@blue-grey, 10%);
+  }
+  
   &--active{
     background: white;
     border: 3px solid @blue-grey;
     margin-right: 17px;
     margin-left: -3px;
+    cursor: auto;
+    
+    &:hover{
+      background: white;
+    }
+  
+    &:active{
+      background: white;
+    }
   }
 
   &:last-child{
