@@ -16,11 +16,28 @@
     background-color: white;
     color: @blue-grey;
     border: 2px solid @border-grey;
+    
+    &:hover{
+      border-color: @blue-grey;
+    }
+    
+    &:active{
+      background: @blue-grey;
+      color: white;
+    }
   }
 
   &--green{
     background-color: @green;
     color: white;
     border: none;
+    
+    &:hover{
+      background: darken(@green, 5%);
+    }
+    
+    &:active{
+      color: fade(white, 30%);
+    }
   }
 }
