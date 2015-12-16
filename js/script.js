@@ -33,10 +33,12 @@
 
     if (num >= 4) {
       input.value = ++num + " дней";
-    } else {
+    } else if (num < 4 & num > 0) {
       input.value = ++num + " дня";
       minusBtn[0].classList.remove('contest-form__number-change-btn--disable');
       minusBtn[0].classList.add('contest-form__number-change-btn--minus');
+    } else {
+      input.value = "1 день";
     }
   });
 
