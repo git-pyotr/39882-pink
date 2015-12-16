@@ -5,9 +5,37 @@
   height: 23px;
   top: 22px;
   left: 0;
-  background: url(../img/logotype-white-mobile.svg) no-repeat;
+  background-image: url(../img/logotype-white-mobile.svg);
+  background-repeat: no-repeat;
   font-size: 0;
   z-index: 10;
+  
+  &:hover{
+    background-image: url(../img/logotype-pink-mobile.svg);
+  }
+  
+  &:active{
+    background-image: url(../img/logotype-white-mobile.svg);
+    opacity: .3;
+  }
+  
+  &--footer{
+    position: static;
+    width: 145px;
+    height: 40px;
+    background-image: url(../img/logotype-blue-tablet.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto 40px auto;
+
+    &:hover{
+      background-image: url(../img/logotype-pink-tablet.svg);
+    }
+
+    &:active{
+      background-image: url(../img/logotype-blue-tablet.svg);
+    }
+  }
 }
 
 @media (min-width: @screen-sm) {
@@ -16,11 +44,54 @@
     height: 40px;
     top: 27px;
     background-image: url(../img/logotype-white-tablet.svg);
+    
+    &:hover{
+      background-image: url(../img/logotype-pink-tablet.svg);
+    }
+    
+    &:active{
+      background-image: url(../img/logotype-white-tablet.svg);
+    }
+    
+    &--footer{
+      position: static;
+      width: 145px;
+      height: 40px;
+      background-image: url(../img/logotype-blue-tablet.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      margin-top: -15px;
+      
+      &:hover{
+        background-image: url(../img/logotype-pink-tablet.svg);
+      }
+      
+      &:active{
+        background-image: url(../img/logotype-blue-tablet.svg);
+      }
+    }
   }
 }
 
 @media (min-width: @screen-lg) {
   .logo{
     background-image: url(../img/logotype-white-desktop.svg);
+    
+    &:hover{
+      background-image: url(../img/logotype-pink-desktop.svg);
+    }
+    
+    &:active{
+      background-image: url(../img/logotype-white-desktop.svg);
+    }
+    
+    &--footer{
+      background-image: url(../img/logotype-blue-desktop.svg);
+      
+      &:active{
+        background-image: url(../img/logotype-blue-desktop.svg);
+      }
+    }
   }
 }

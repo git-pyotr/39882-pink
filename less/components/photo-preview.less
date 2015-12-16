@@ -7,23 +7,35 @@
   font-weight: 400;
   color: @blue-grey;
   text-transform: uppercase;
+  text-align: left;
   margin: 0 0 20px 36px;
   padding: 0;
+}
 
-  &:before{
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 52px;
-    width: 30px;
-    height: 30px;
-    border: 2px solid @border-grey;
-    border-radius: 50%;
-    background-image: url(../img/cross-grey.png);
-    background-position: center;
-    background-color: white;
-    background-repeat: no-repeat;
-    cursor: pointer;
+.photo-preview__icon-close{
+  position: absolute;
+  top: -15px;
+  left: 52px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid @border-grey;
+  border-radius: 50%;
+  background-image: url(../img/cross-grey.svg);
+  background-size: 12px 12px;
+  background-position: center;
+  background-color: white;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  
+  &:hover{
+    border-color: @blue-grey;
+    background-image: url(../img/cross.svg);
+  }
+  
+  &:active{
+    border-color: @blue-grey;
+    background-image: url(../img/cross-white.svg);
+    background-color: @blue-grey;
   }
 }
 
@@ -33,14 +45,14 @@
     font-size: 14px;
     line-height: 26px;
     margin: 0 0 45px 66px;
-
-    &:before{
-      top: -25px;
-      left: 95px;
-      width: 50px;
-      height: 50px;
-      background-size: 20px 20px;
-    }
+  }
+  
+  .photo-preview__icon-close{
+    top: -25px;
+    left: 95px;
+    width: 50px;
+    height: 50px;
+    background-size: 20px 20px;
   }
 }
 

@@ -20,6 +20,14 @@
     border: 2px solid @border-grey;
     border-radius: 2px;
   }
+  
+  & + label:hover:before{
+    border-color: @blue-grey;
+  }
+  
+  & + label:active:before{
+    border-color: @pink;
+  }
 
   &:checked + label:after{
     content: '';

@@ -21,6 +21,14 @@
     border-radius: 50%;
     box-shadow: 0 0 0 2px @border-grey;
   }
+  
+  & + label:hover:before{
+    box-shadow: 0 0 0 2px @blue-grey;
+  }
+  
+  & + label:active:before{
+    box-shadow: 0 0 0 2px @pink;
+  }
 
   &:checked + label:before{
     background: @pink;
