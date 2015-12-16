@@ -25,6 +25,14 @@
       cursor: pointer;
     }
     
+    & .main-menu__icon:hover:before{
+        background-image: url(../img/menu-burger-pink.svg);
+      }
+
+    & .main-menu__icon:active:before{
+      opacity: .3;
+    }
+    
     & .main-menu__list{
       display: none;
     }
@@ -44,7 +52,14 @@
     background-size: contain;
     cursor: pointer;
   }
+  
+  &:hover:before{
+    background-image: url(../img/menu-cross-pink.svg);
+  }
 
+  &:active:before{
+    opacity: .3;
+  }
 }
 
 .main-menu__list{
@@ -75,6 +90,14 @@
   box-shadow:
     inset 0 1px lighten(@blue-grey, 10%),
     inset 0 -1px darken(@blue-grey, 10%);
+  
+  &:hover{
+    color: @pink;
+  }
+  
+  &:active{
+    color: fade(@pink, 30%);
+  }
 }
 
 @media (min-width: @screen-sm) {
@@ -122,6 +145,20 @@
     text-transform: none;
     background: transparent;
     box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: 70px;
+    
+    &:hover{
+      color: white;
+      border-bottom: 2px solid white;
+      padding-bottom: 12px;
+    }
+    
+    &:active{
+      color: white;
+      border: none;
+      opacity: .3;
+    }
   }
 }

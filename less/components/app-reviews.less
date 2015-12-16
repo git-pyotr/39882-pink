@@ -87,42 +87,42 @@
   
   .app-reviews__review{
     padding: 0;
-  }
-  
-  .app-reviews__review{
     background-image: url(../img/quotes.svg);
     background-repeat: no-repeat;
     background-size: 79px 64px;
     background-position: 50% 70px;
+  }
+  
+  .app-reviews__arrow{
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    top: 212px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    opacity: .3;
     
-    &:before{
-      content: "";
-      position: absolute;
-      width: 22px;
-      height: 42px;
-      top: 212px;
+    &:hover{
+      opacity: 1;
+    }
+    
+    &:active{
+      opacity: .1;
+    }
+    
+    &--left{
       left: 0;
       background-image: url(../img/review-arrow-left.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      cursor: pointer;
     }
     
-    &:after{
-      content: "";
-      position: absolute;
-      width: 22px;
-      height: 42px;
-      top: 212px;
+    &--right{
       right: 0;
       background-image: url(../img/review-arrow-right.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      cursor: pointer;
     }
   }
+    
   
   .app-reviews__text{
     padding-top: 190px;

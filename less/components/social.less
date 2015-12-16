@@ -21,15 +21,30 @@
   }
 
   &--twitter{
-    background-image: url(../img/icon-twitter.png);
+    background-image: url(../img/twitter.svg);
   }
 
   &--fb{
-    background-image: url(../img/icon-facebook.png);
+    background-image: url(../img/facebook.svg);
   }
 
   &--youtube{
-    background-image: url(../img/icon-youtube.png);
+    background-image: url(../img/youtube.svg);
     background-position-x: 17px;
+  }
+  
+  &:hover{
+    border-color: @blue-grey;
+  }
+  
+  &:active{
+    border-color: fadein(fade(@blue-grey, 10%), 30%);
+    opacity: .3;
+  }
+}
+
+@media (min-width: @screen-sm) {
+  .social{
+    margin-bottom: 0;
   }
 }
