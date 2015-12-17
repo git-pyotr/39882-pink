@@ -1,71 +1,79 @@
 (function() {
 
+  var menuBtn = document.querySelector('.main-menu__icon');
   var minusBtn = document.querySelectorAll('.contest-form__number-change-btn--minus');
   var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
 
+//-----------------------------------------------------------------
+  
+  menuBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    this.parentNode.parentNode.classList.toggle('main-menu--closed');
+  });
 
+//------------------------------------------------------------------
 
-  minusBtn[0].addEventListener("click", function(event) {
+    var inputDate = minusBtn[0].nextElementSibling;
+  
+
+  minusBtn[0].addEventListener('click', function(event) {
     event.preventDefault();
 
-    var input = minusBtn[0].nextElementSibling;
-    var num = parseInt(input.value, 10);
-
+    var num = parseInt(inputDate.value, 10);
 
     if (num > 5) {
-      input.value = --num + " дней";
+      inputDate.value = --num + " дней";
     } else if (num <= 5 & num > 2) {
-      input.value = --num + " дня";
+      inputDate.value = --num + " дня";
     } else {
-      input.value = "1 день";
+      inputDate.value = "1 день";
       this.classList.add('contest-form__number-change-btn--disable');
       this.classList.remove('contest-form__number-change-btn--minus');
     }
-
   });
-
-  plusBtn[0].addEventListener("click", function(event) {
+  
+  plusBtn[0].addEventListener('click', function(event) {
     event.preventDefault();
-
-    var input = minusBtn[0].nextElementSibling;
-    var num = parseInt(input.value, 10);
-
+    
+    var num = parseInt(inputDate.value, 10);
 
     if (num >= 4) {
-      input.value = ++num + " дней";
+      inputDate.value = ++num + " дней";
     } else if (num < 4 & num > 0) {
-      input.value = ++num + " дня";
+      inputDate.value = ++num + " дня";
       minusBtn[0].classList.remove('contest-form__number-change-btn--disable');
       minusBtn[0].classList.add('contest-form__number-change-btn--minus');
     } else {
-      input.value = "1 день";
+      inputDate.value = "1 день";
     }
   });
 
+//------------------------------------------------------------------
+  
+  var inputCompanion = minusBtn[1].nextElementSibling;
+  
 
-
-  minusBtn[1].addEventListener("click", function(event) {
+  minusBtn[1].addEventListener('click', function(event) {
     event.preventDefault();
 
-    var input= minusBtn[1].nextElementSibling;
-    var num = parseInt(input.value, 10);
+    var num = parseInt(inputCompanion.value, 10);
 
     if (num > 1) {
-      input.value = --num + " чел";
+      inputCompanion.value = --num + " чел";
     } else {
-      input.value = "0 чел"
+      inputCompanion.value = "0 чел"
       this.classList.add('contest-form__number-change-btn--disable');
       this.classList.remove('contest-form__number-change-btn--minus');
     }
   });
-
-  plusBtn[1].addEventListener("click", function(event) {
+  
+  plusBtn[1].addEventListener('click', function(event) {
     event.preventDefault();
 
-    var input= minusBtn[1].nextElementSibling;
-    var num = parseInt(input.value, 10);
+    var num = parseInt(inputCompanion.value, 10);
 
-    input.value = ++num + " чел";
+    inputCompanion.value = ++num + " чел";
 
     if (num >= 1) {
       minusBtn[1].classList.remove('contest-form__number-change-btn--disable');
@@ -73,7 +81,7 @@
     }
   });
 
-
+//-----------------------------------------------------------------
 
   if (!("FormData" in window)) {
       return;

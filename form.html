@@ -48,7 +48,7 @@
                 Имя: *
               </label>
             </h3>
-            <input class="input  input--text" type="text" placeholder="Введите ваше имя" id="name" required>
+            <input class="input  input--text" type="text" name="name" placeholder="Введите ваше имя" id="name" required>
           </div>
 
           <div class="contest-form__input-name">
@@ -57,7 +57,7 @@
                 Фамилия: *
               </label>
             </h3>
-            <input class="input  input--text" type="text" placeholder="Укажите фамилию" id="surname" required>
+            <input class="input  input--text" type="text" name="surname" placeholder="Укажите фамилию" id="surname" required>
           </div>
 
           <div class="contest-form__input-name">
@@ -66,7 +66,7 @@
                 Отчество:
               </label>
             </h3>
-            <input class="input  input--text" type="text" placeholder="Ну и отчество тоже" id="patronymic">
+            <input class="input  input--text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
 
           <div class="contest-form__inputs">
             <div class="contest-form__input-group">
-              <input class="input  input--date" type="text" value="1 апреля 2015" id="date-departure" required>
+              <input class="input  input--date" type="text" name="date-departure" value="1 апреля 2015" id="date-departure" required>
               <h3 class="contest-form__title">
                 <label for="date-departure" class="contest-form__label  contest-form__label--bottom">
                   Дата выезда
@@ -105,7 +105,7 @@
             <div class="contest-form__input-group">
               <div class="contest-form__input-number">
                 <div class="contest-form__number-change-btn  contest-form__number-change-btn--minus">-</div>
-                <input class="input  input--number" type="text" value="10 дней" id="duration" required>
+                <input class="input  input--number" type="text" name="duration" value="10 дней" id="duration" required>
                 <div class="contest-form__number-change-btn  contest-form__number-change-btn--plus">+</div>
               </div>
               <h3 class="contest-form__title">
@@ -116,7 +116,7 @@
             </div>
 
             <div class="contest-form__input-group">
-              <input class="input  input--date" type="text" value="1 апреля 2015" id="date-arrival" readonly required>
+              <input class="input  input--date" type="text" name="date-arrival" value="1 апреля 2015" id="date-arrival" readonly required>
               <h3 class="contest-form__title">
                 <label for="date-arrival" class="contest-form__label  contest-form__label--bottom">
                   Дата возвращения
@@ -135,7 +135,7 @@
 
           <div class="contest-form__input-number  contest-form__input-number--companion">
             <div class="contest-form__number-change-btn  contest-form__number-change-btn--minus">-</div>
-            <input class="input  input--number" type="text" value="2 чел" id="companions-number" readonly required>
+            <input class="input  input--number" type="text" name="companions-number" value="2 чел" id="companions-number" readonly required>
             <div class="contest-form__number-change-btn  contest-form__number-change-btn--plus">+</div>
           </div>
 
@@ -152,7 +152,7 @@
                     Имя: *
                   </label>
                 </h3>
-                <input class="input  input--text" type="text" placeholder="Введите ваше имя" id="companion-name-1" required>
+                <input class="input  input--text" type="text" name="companion-name-1" placeholder="Введите ваше имя" id="companion-name-1" required>
               </div>
 
               <div class="contest-form__input-wrapper">
@@ -161,7 +161,7 @@
                     Прозвище:
                   </label>
                 </h3>
-                <input class="input  input--text" type="text" placeholder="Ну как же без этого!" id="nickname-1">
+                <input class="input  input--text" type="text" name="nickname-1" placeholder="Ну как же без этого!" id="nickname-1">
               </div>
             </div>
 
@@ -181,7 +181,7 @@
                     Имя: *
                   </label>
                 </h3>
-                <input class="input  input--text" type="text" placeholder="Введите ваше имя" id="companion-name-2" required>
+                <input class="input  input--text" type="text" name="companion-name-2" placeholder="Введите ваше имя" id="companion-name-2" required>
               </div>
 
               <div class="contest-form__input-wrapper">
@@ -190,7 +190,7 @@
                     Прозвище:
                   </label>
                 </h3>
-                <input class="input  input--text" type="text" placeholder="Ну как же без этого!" id="nickname-2">
+                <input class="input  input--text" type="text" name="nickname-2" placeholder="Ну как же без этого!" id="nickname-2">
               </div>
             </div>
 
@@ -204,22 +204,22 @@
           <h3 class="contest-form__title  contest-form__title--fieldset-title">Ваши безбашенные достижения в путешествии</h3>
 
           <div class="contest-form__iput-achievments">
-            <input class="checkbox" type="checkbox" id="shark" value="shark" checked>
+            <input class="checkbox" type="checkbox" name="shark" id="shark" value="shark" checked>
             <label class="contest-form__input-description" for="shark">Сделал селфи с акулой</label>
 
-            <input class="checkbox" type="checkbox" id="beach" value="beach" checked>
+            <input class="checkbox" type="checkbox" name="beach" id="beach" value="beach" checked>
             <label class="contest-form__input-description" for="beach">Обгорел на пляже</label>
 
-            <input class="checkbox" type="checkbox" id="chuck" value="chuck">
+            <input class="checkbox" type="checkbox" name="chuck" id="chuck" value="chuck">
             <label class="contest-form__input-description" for="chuck">Видел Чака Норриса</label>
 
-            <input class="checkbox" type="checkbox" id="souvenirs" value="souvenirs">
+            <input class="checkbox" type="checkbox" name="souvenirs" id="souvenirs" value="souvenirs">
             <label class="contest-form__input-description" for="souvenirs">Накупил сувениров</label>
 
-            <input class="checkbox" type="checkbox" id="tower" value="tower" checked>
+            <input class="checkbox" type="checkbox" name="tower" id="tower" value="tower" checked>
             <label class="contest-form__input-description" for="tower">Удержал башню</label>
 
-            <input class="checkbox" type="checkbox" id="hotel" value="hotel">
+            <input class="checkbox" type="checkbox" name="hotel" id="hotel" value="hotel">
             <label class="contest-form__input-description" for="hotel">Разгромил отель</label>
           </div>
         </div>
