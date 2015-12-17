@@ -5,17 +5,17 @@
   var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
 
 //-----------------------------------------------------------------
-  
+
   menuBtn.addEventListener('click', function(event) {
     event.preventDefault();
-    
+
     this.parentNode.parentNode.classList.toggle('main-menu--closed');
   });
 
 //------------------------------------------------------------------
 
     var inputDate = minusBtn[0].nextElementSibling;
-  
+
 
   minusBtn[0].addEventListener('click', function(event) {
     event.preventDefault();
@@ -32,10 +32,10 @@
       this.classList.remove('contest-form__number-change-btn--minus');
     }
   });
-  
+
   plusBtn[0].addEventListener('click', function(event) {
     event.preventDefault();
-    
+
     var num = parseInt(inputDate.value, 10);
 
     if (num >= 4) {
@@ -50,9 +50,9 @@
   });
 
 //------------------------------------------------------------------
-  
+
   var inputCompanion = minusBtn[1].nextElementSibling;
-  
+
 
   minusBtn[1].addEventListener('click', function(event) {
     event.preventDefault();
@@ -67,7 +67,7 @@
       this.classList.remove('contest-form__number-change-btn--minus');
     }
   });
-  
+
   plusBtn[1].addEventListener('click', function(event) {
     event.preventDefault();
 
