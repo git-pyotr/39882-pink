@@ -107,6 +107,16 @@
   &:active{
     background-color: @blue-grey;
   }
+  
+  &--disable{
+    background-image: url(../img/minus.png);
+    background-size: 27px 3px;
+    
+    &:hover, &:active{
+      border-color: @border-grey;
+      background-color: white;
+    }
+  }
 
   &--minus{
     background-image: url(../img/minus.png);
@@ -131,6 +141,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: flex-start;
   padding: 0;
   margin-bottom: 20px;
 
@@ -470,17 +481,6 @@
     align-content: space-between;
     height: 160px;
     margin-top: 10px;
-  }
-
-  .contest-form__input-description{
-
-    &:first-of-type {
-       margin-top: 0 !important;
-    }
-
-    &:last-of-type {
-       margin-bottom: 45px !important;
-    }
   }
 
   .contest-form__photo-preview{
