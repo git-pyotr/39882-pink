@@ -1,43 +1,49 @@
-slider-tabs{
+slider-tabs {
   font-size: 0;
+
   text-align: center;
 }
 
-.slider-tabs__tab{
+.slider-tabs__tab {
   display: inline-block;
-  vertical-align: middle;
+
   width: 6px;
   height: 6px;
-  background: fade(@blue-grey, 30%);
   margin-right: 20px;
-  border-radius: 50%;
-  cursor: pointer;
 
-  &:hover{
+  cursor: pointer;
+  vertical-align: middle;
+
+  border-radius: 50%;
+  background: fade(@blue-grey, 30%);
+
+  &:hover {
     background: @blue-grey;
   }
-  
-  &:active{
+
+  &:active {
     background: fade(@blue-grey, 10%);
   }
-  
-  &--active{
-    background: white;
-    border: 3px solid @blue-grey;
+
+  &--active {
     margin-right: 17px;
     margin-left: -3px;
+
     cursor: auto;
-    
-    &:hover{
+
+    border: 3px solid @blue-grey;
+    background: white;
+
+    &:hover {
       background: white;
     }
-  
-    &:active{
+
+    &:active {
       background: white;
     }
   }
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }

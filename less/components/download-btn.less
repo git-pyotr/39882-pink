@@ -1,33 +1,35 @@
-.download-btn{
-  display: block;
-  padding: 15px 10px;
-  width: 280px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-
+.download-btn {
   font-size: @h2-font-size;
+  font-weight: 700;
   line-height: @h2-font-size;
+
+  display: block;
+
+  box-sizing: border-box;
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px 10px;
+
   text-align: center;
   text-decoration: none;
-  color: white;
-  font-weight: 700;
 
+  color: white;
   border: 3px solid white;
   border-radius: (@h2-font-size * 2);
-  
-  &:hover{
-    background-color: white;
+
+  &:hover {
     color: @pink;
+    background-color: white;
   }
-  
-  &:active{
+
+  &:active {
     color: fade(@pink, 30%);
   }
 }
 
 @media (min-width: @screen-lg) {
-  .download-btn{
+  .download-btn {
     margin-right: 100%;
   }
 }

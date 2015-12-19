@@ -1,39 +1,45 @@
-.copyright{
+.copyright {
   font-size: 14px;
-  line-height: 18px;
   font-weight: 400;
-  color: @blue-grey;
-  text-align: center;
+  line-height: 18px;
+
   margin-bottom: 45px;
+
+  text-align: center;
+
+  color: @blue-grey;
 }
 
-.htmlacademy-icon{
+.htmlacademy-icon {
   display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
+
   width: 27px;
   height: 34px;
+  margin-left: 10px;
+
+  vertical-align: middle;
+
   background-image: url(../img/htmlacademy-pink.svg);
   background-repeat: no-repeat;
   background-position: center;
-  
-  &:hover{
+
+  &:hover {
     background-image: url(../img/htmlacademy-grey.svg);
   }
-  
-  &:active{
-    opacity: .3;
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 @media (min-width: @screen-sm) {
-  .copyright{
+  .copyright {
     margin-bottom: 0;
   }
 }
 
 @media (min-width: @screen-lg) {
-  .copyright{
+  .copyright {
     font-size: 18px;
   }
 }

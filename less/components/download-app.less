@@ -1,73 +1,79 @@
-.download-app{
+.download-app {
   padding: 30px 0;
+
   background-color: @d-grey;
 }
 
-.download-app__device-option{
+.download-app__device-option {
   font-size: 0;
-  text-align: center;
+
   padding-top: 35px;
   padding-bottom: 25px;
 
-  & a{
+  text-align: center;
+
+  & a {
     display: inline-block;
-    vertical-align: middle;
+
     margin-right: 35px;
+
+    vertical-align: middle;
   }
 
-  & a:last-child{
+  & a:last-child {
     margin-right: 0;
   }
 }
 
-.download-app__description{
+.download-app__description {
   font-size: @paragraph-font-size;
-  line-height: (@base-font-size * 2.4);
   font-weight: 300;
-  text-align: center;
-  color: white;
+  line-height: (@base-font-size * 2.4);
 
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  text-align: center;
+
+  color: white;
 }
 
 //media
 
 @media (min-width: @screen-sm) {
-
-  .download-app{
+  .download-app {
     background-color: transparent;
   }
 
-  .download-app__description{
+  .download-app__description {
     font-size: 18px;
     line-height: 24px;
   }
 
-  .download-app__device-option{
+  .download-app__device-option {
     padding-top: 50px;
     padding-bottom: 40px;
   }
 }
 
 @media (min-width: @screen-sm) {
-  .download-app__device-option{
+  .download-app__device-option {
     width: 280px;
     margin-right: 100%;
   }
 
-  .download-app__description{
+  .download-app__description {
     width: 280px;
     margin-right: 100%;
   }
 }
 
 @media (min-width: @screen-lg) {
-  .download-app{
+  .download-app {
     padding-top: 55px;
   }
 
-  .download-app__device-option{
+  .download-app__device-option {
     padding-top: 75px;
     padding-bottom: 55px;
   }

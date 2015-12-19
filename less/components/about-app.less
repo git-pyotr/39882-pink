@@ -1,53 +1,63 @@
-.about-app{
-  background: @l-grey;
+.about-app {
   text-align: center;
+
+  background: @l-grey;
 }
 
-.about-app__promo{
-  background: white;
-  padding-bottom: 65px;
-  margin: 0;
+.about-app__promo {
   position: relative;
 
-  &:after{
-    content: '';
+  margin: 0;
+  padding-bottom: 65px;
+
+  background: white;
+
+  &:after {
     position: absolute;
     bottom: 0;
     left: 0;
+
     width: 100%;
     height: 33px;
+
+    content: "";
+
     background: linear-gradient(to bottom right, white 50%, @l-grey 50%);
   }
 }
 
-.about-app__promo-text{
+.about-app__promo-text {
   font-size: @large-font-size;
-  line-height: round(@large-font-size * 1.2);
   font-weight: 300;
-  color: @blue-grey;
-  padding: 0;
+  line-height: round(@large-font-size * 1.2);
+
   margin-top: 35px;
-}
-
-.about-app__app-description{
-  padding-top: 35px;
-  margin: 0;
-  font-size: 0;
-}
-
-.about-app__description-title{
   padding: 0;
+
+  color: @blue-grey;
+}
+
+.about-app__app-description {
+  font-size: 0;
+
+  margin: 0;
+  padding-top: 35px;
+}
+
+.about-app__description-title {
   margin-top: 15px;
   margin-bottom: 12px;
-}
-
-.about-app__description-text{
   padding: 0;
-  margin-bottom: 35px;
 }
 
-.about-app__iphone{
+.about-app__description-text {
+  margin-bottom: 35px;
+  padding: 0;
+}
+
+.about-app__iphone {
   display: block;
+
   width: 158px;
   height: 278px;
   margin: auto;
@@ -56,134 +66,147 @@
 //media
 
 @media (min-width: @screen-sm) {
-  .about-app__promo{
+  .about-app__promo {
     padding-top: 55px;
     padding-bottom: 105px;
-    
-    &:after{
+
+    &:after {
       height: 55px;
     }
   }
-  
-  .about-app__promo-text{
+
+  .about-app__promo-text {
     font-size: 40px;
     line-height: 1.2em;
+
     margin: 0;
-    
-    &:last-of-type{
+
+    &:last-of-type {
       width: 360px;
-      margin-left: auto;
       margin-right: auto;
+      margin-left: auto;
     }
   }
 
-  .about-app__app-description{
+  .about-app__app-description {
     position: relative;
+
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
-  .about-app__description-title{
+
+  .about-app__description-title {
     margin-left: 310px;
+
     text-align: left;
   }
-  
-  .about-app__description-text{
+
+  .about-app__description-text {
     margin-left: 310px;
+
     text-align: left;
   }
-  
-  .about-app__iphone{
+
+  .about-app__iphone {
     position: absolute;
+    bottom: -45px;
+    left: 0;
+
     width: 268px;
     height: 481px;
-    left: 0;
-    bottom: -45px;
   }
 }
 
 @media (min-width: @screen-lg) {
-  .about-app__promo{
+  .about-app__promo {
     padding-top: 75px;
     padding-bottom: 180px;
-    
-    &:after{
+
+    &:after {
       height: 90px;
     }
   }
-  
-  .about-app__promo-text{
+
+  .about-app__promo-text {
     font-size: 50px;
     line-height: 1.2em;
-    
-    &:last-of-type{
+
+    &:last-of-type {
       width: 450px;
     }
   }
-  
-  .about-app__app-description{
-    
-    & .container{
+
+  .about-app__app-description {
+    & .container {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+
       align-content: flex-start;
+      justify-content: space-between;
     }
   }
-  
-  .about-app__iphone{
+
+  .about-app__iphone {
     display: none;
   }
-  
-  .about-app__description-item{
-    width: 33.3%;
+
+  .about-app__description-item {
     position: relative;
+
+    width: 33.3%;
     padding: 260px 40px 40px 40px;
-    
-    &:before{
-      content: "";
+
+    &:before {
       position: absolute;
-      width: 292px;
-      height: 302px;
-      background: url(../img/iphone-screen-desktop-2@1x.png) center;
-      background-size: contain;
       top: -100px;
       left: 50%;
+
+      width: 292px;
+      height: 302px;
       margin-left: -146px;
-      
+
+      content: "";
+
+      background: url(../img/iphone-screen-desktop-2@1x.png) center;
+      background-size: contain;
+
       @media (min-resolution: 2dppx) {
         background-image: url(../img/iphone-screen-desktop-2@2x.png);
       }
     }
-    
-    &:first-of-type:before{
+
+    &:first-of-type:before {
       background-image: url(../img/iphone-screen-desktop-1@1x.png);
-      
+
       @media (min-resolution: 2dppx) {
         background-image: url(../img/iphone-screen-desktop-1@2x.png);
       }
     }
-    
-    &:last-of-type:before{
+
+    &:last-of-type:before {
       background-image: url(../img/iphone-screen-desktop-3@1x.png);
-      
+
       @media (min-resolution: 2dppx) {
         background-image: url(../img/iphone-screen-desktop-3@2x.png);
       }
     }
   }
-  
-  .about-app__description-title{
+
+  .about-app__description-title {
     font-size: 30px;
     line-height: 1.2em;
-    text-align: center;
+
     margin: 0 0 30px 0;
+
+    text-align: center;
   }
-  
-  .about-app__description-text{
+
+  .about-app__description-text {
     font-size: 18px;
     line-height: 30px;
-    text-align: center;
+
     margin: 0;
+
+    text-align: center;
   }
 }

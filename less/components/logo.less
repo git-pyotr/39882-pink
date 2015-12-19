@@ -1,73 +1,83 @@
-.logo{
-  display: block;
+.logo {
+  font-size: 0;
+
   position: absolute;
-  width: 74px;
-  height: 23px;
+  z-index: 10;
   top: 22px;
   left: 0;
+
+  display: block;
+
+  width: 74px;
+  height: 23px;
+
   background-image: url(../img/logotype-white-mobile.svg);
   background-repeat: no-repeat;
-  font-size: 0;
-  z-index: 10;
-  
-  &:hover{
+
+  &:hover {
     background-image: url(../img/logotype-pink-mobile.svg);
   }
-  
-  &:active{
+
+  &:active {
+    opacity: 0.3;
     background-image: url(../img/logotype-white-mobile.svg);
-    opacity: .3;
   }
-  
-  &--footer{
+
+  &--footer {
     position: static;
+
     width: 145px;
     height: 40px;
-    background-image: url(../img/logotype-blue-tablet.svg);
-    background-position: center;
-    background-repeat: no-repeat;
     margin: 0 auto 40px auto;
 
-    &:hover{
+    background-image: url(../img/logotype-blue-tablet.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
       background-image: url(../img/logotype-pink-tablet.svg);
     }
 
-    &:active{
+    &:active {
       background-image: url(../img/logotype-blue-tablet.svg);
     }
   }
 }
 
 @media (min-width: @screen-sm) {
-  .logo{
+  .logo {
+    top: 27px;
+
     width: 145px;
     height: 40px;
-    top: 27px;
+
     background-image: url(../img/logotype-white-tablet.svg);
-    
-    &:hover{
+
+    &:hover {
       background-image: url(../img/logotype-pink-tablet.svg);
     }
-    
-    &:active{
+
+    &:active {
       background-image: url(../img/logotype-white-tablet.svg);
     }
-    
-    &--footer{
+
+    &--footer {
       position: static;
+
       width: 145px;
       height: 40px;
-      background-image: url(../img/logotype-blue-tablet.svg);
-      background-position: center;
-      background-repeat: no-repeat;
       margin: 0;
       margin-top: -15px;
-      
-      &:hover{
+
+      background-image: url(../img/logotype-blue-tablet.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
         background-image: url(../img/logotype-pink-tablet.svg);
       }
-      
-      &:active{
+
+      &:active {
         background-image: url(../img/logotype-blue-tablet.svg);
       }
     }
@@ -75,21 +85,21 @@
 }
 
 @media (min-width: @screen-lg) {
-  .logo{
+  .logo {
     background-image: url(../img/logotype-white-desktop.svg);
-    
-    &:hover{
+
+    &:hover {
       background-image: url(../img/logotype-pink-desktop.svg);
     }
-    
-    &:active{
+
+    &:active {
       background-image: url(../img/logotype-white-desktop.svg);
     }
-    
-    &--footer{
+
+    &--footer {
       background-image: url(../img/logotype-blue-desktop.svg);
-      
-      &:active{
+
+      &:active {
         background-image: url(../img/logotype-blue-desktop.svg);
       }
     }

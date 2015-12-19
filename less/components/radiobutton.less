@@ -1,36 +1,47 @@
-.radiobutton{
+.radiobutton {
   display: none;
 
-  & + label:first-of-type{
+  & + label:first-of-type {
     margin-top: 30px;
   }
 
-  & + label:last-of-type{
+  & + label:last-of-type {
     margin-bottom: 25px;
   }
 
-  & + label:before{
-    content: '';
+  & + label:before {
     position: absolute;
-    width: 15px;
-    height: 15px;
     top: -2.5px;
     left: 0;
-    background: white;
+
+    width: 15px;
+    height: 15px;
+
+    content: "";
+
     border: 10px solid white;
     border-radius: 50%;
+    background: white;
     box-shadow: 0 0 0 2px @border-grey;
   }
-  
-  & + label:hover:before{
+
+  & + label:hover:before {
     box-shadow: 0 0 0 2px @blue-grey;
   }
-  
-  & + label:active:before{
+
+  & + label:active:before {
     box-shadow: 0 0 0 2px @pink;
   }
 
-  &:checked + label:before{
+  &:checked + label:before {
     background: @pink;
+  }
+}
+
+@media (min-width:@screen-lg) {
+  .radiobutton {
+    & + label:first-of-type {
+      margin-top: 0;
+    }
   }
 }

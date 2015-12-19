@@ -1,77 +1,84 @@
-.input{
-  width: 100%;
-  box-sizing: border-box;
-  border: 2px solid @border-grey;
-  padding: 15px 22px;
-  margin: 0;
+.input {
   font-family: @base-font;
   font-size: 18px;
-  line-height: 30px;
   font-weight: 400;
+  line-height: 30px;
+
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 15px 22px;
+
   color: @blue-grey;
-  
-  &:hover{
+  border: 2px solid @border-grey;
+
+  &:hover {
     border-color: @blue-grey;
   }
-  
-  &:focus{
+
+  &:focus {
     border-color: @pink;
     outline: none;
   }
 
-  &:read-only{
+  &:read-only {
     background-color: @l-grey;
-    
-    &:hover{
+
+    &:hover {
       border-color: @border-grey;
     }
-    
-    &:focus{
+
+    &:focus {
       border-color: @border-grey;
     }
   }
 
-  &--number{
-    text-align: center;
+  &--number {
     width: 157px;
-    flex-shrink: 1;
-    flex-grow: 100;
-    border-left-width: 0;
+
+    text-align: center;
+
     border-right-width: 0;
+    border-left-width: 0;
 
-    &:hover{
-      border-left-width: 2px;
-      border-right-width: 2px;
-      padding-left: 20px;
+    flex-grow: 100;
+    flex-shrink: 1;
+
+    &:hover {
       padding-right: 20px;
-    }
-
-    &:focus{
-      border-left-width: 2px;
-      border-right-width: 2px;
       padding-left: 20px;
-      padding-right: 20px;
-    }
-    
-    &:read-only:hover{
-      border-left-width: 0;
-      border-right-width: 0;
+
+      border-right-width: 2px;
+      border-left-width: 2px;
     }
 
-    &:read-only:focus{
-      border-left-width: 0;
+    &:focus {
+      padding-right: 20px;
+      padding-left: 20px;
+
+      border-right-width: 2px;
+      border-left-width: 2px;
+    }
+
+    &:read-only:hover {
       border-right-width: 0;
+      border-left-width: 0;
+    }
+
+    &:read-only:focus {
+      border-right-width: 0;
+      border-left-width: 0;
     }
   }
 }
 
 @media (min-width: @screen-sm) {
-  .input{
-
-    &--number{
+  .input {
+    &--number {
       width: 57%;
-      flex-shrink: initial;
+
       flex-grow: initial;
+      flex-shrink: initial;
     }
   }
 }
