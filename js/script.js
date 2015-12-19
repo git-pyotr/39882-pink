@@ -4,6 +4,21 @@
   var minusBtn = document.querySelectorAll('.contest-form__number-change-btn--minus');
   var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
 
+  function declOfNum(number, titles) {
+    var cases = [2, 0, 1, 1, 1, 2];
+    return titles[ (number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5] ];
+  }
+
+  function disableBtn(btn) {
+    btn.classList.add('contest-form__number-change-btn--disable');
+    btn.classList.remove('contest-form__number-change-btn--minus');
+  }
+
+  function enableBtn(btn) {
+    btn.classList.remove('contest-form__number-change-btn--disable');
+    btn.classList.add('contest-form__number-change-btn--minus');
+  }
+
 //-----------------------------------------------------------------
 
   menuBtn.addEventListener('click', function(event) {
@@ -14,7 +29,7 @@
 
 //------------------------------------------------------------------
 
-    var inputDate = minusBtn[0].nextElementSibling;
+  var inputDate = minusBtn[0].nextElementSibling;
 
 
   minusBtn[0].addEventListener('click', function(event) {
@@ -22,14 +37,15 @@
 
     var num = parseInt(inputDate.value, 10);
 
-    if (num > 5) {
-      inputDate.value = --num + " дней";
-    } else if (num <= 5 & num > 2) {
-      inputDate.value = --num + " дня";
+    if (num > 2) {
+      inputDate.value = --num + declOfNum(num, [' день', ' дня', ' дней']);
+
+      if (this.classList.contains('contest-form__number-change-btn--disable')) {
+        enableBtn(this);
+      }
     } else {
-      inputDate.value = "1 день";
-      this.classList.add('contest-form__number-change-btn--disable');
-      this.classList.remove('contest-form__number-change-btn--minus');
+      inputDate.value = '1 день';
+      disableBtn(this);
     }
   });
 
@@ -38,14 +54,15 @@
 
     var num = parseInt(inputDate.value, 10);
 
-    if (num >= 4) {
-      inputDate.value = ++num + " дней";
-    } else if (num < 4 & num > 0) {
-      inputDate.value = ++num + " дня";
-      minusBtn[0].classList.remove('contest-form__number-change-btn--disable');
-      minusBtn[0].classList.add('contest-form__number-change-btn--minus');
+    if (num >= 1) {
+      inputDate.value = ++num + declOfNum(num, [' день', ' дня', ' дней']);
+
+      if (minusBtn[0].classList.contains('contest-form__number-change-btn--disable')) {
+        enableBtn(minusBtn[0]);
+      }
     } else {
-      inputDate.value = "1 день";
+      inputDate.value = '1 день';
+      disableBtn(minusBtn[0]);
     }
   });
 
@@ -63,8 +80,7 @@
       inputCompanion.value = --num + " чел";
     } else {
       inputCompanion.value = "0 чел"
-      this.classList.add('contest-form__number-change-btn--disable');
-      this.classList.remove('contest-form__number-change-btn--minus');
+      disableBtn(this);
     }
   });
 
@@ -75,9 +91,8 @@
 
     inputCompanion.value = ++num + " чел";
 
-    if (num >= 1) {
-      minusBtn[1].classList.remove('contest-form__number-change-btn--disable');
-      minusBtn[1].classList.add('contest-form__number-change-btn--minus');
+    if (minusBtn[1].classList.contains('contest-form__number-change-btn--disable')) {
+      enableBtn(minusBtn[1]);
     }
   });
 
