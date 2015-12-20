@@ -32,7 +32,7 @@
       </div>
     </header>
 
-    <form action="#" class="contest-form">
+    <form class="contest-form" method="post" action="https://echo.htmlacademy.ru/adaptive">
       <div class="container">
         <p class="contest-form__description">
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
@@ -135,7 +135,7 @@
 
           <div class="contest-form__input-number  contest-form__input-number--companion">
             <div class="contest-form__number-change-btn  contest-form__number-change-btn--minus">-</div>
-            <input class="input  input--number" type="text" name="companions-number" value="2 чел" id="companions-number" readonly required>
+            <input class="input  input--number" type="text" name="companions-number" value="2 чел" id="companions-number" readonly required autocomplete="off">
             <div class="contest-form__number-change-btn  contest-form__number-change-btn--plus">+</div>
           </div>
 
@@ -311,6 +311,39 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="js/script.js"></script>
+
+    <script id="companion-name-input" type="text/html">
+      <div class="contest-form__companion-name">
+        <div class="contest-form__companion-number-block">
+          <h3 class="contest-form__title  contest-form__label  contest-form__label--top">№</h3>
+          <div class="contest-form__companion-number">{{number}}</div>
+        </div>
+
+        <div class="contest-form__companion-name-block">
+          <div class="contest-form__input-wrapper">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="companion-name-{{number}}" class="contest-form__label  contest-form__label--top">
+                Имя: *
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="companion-name-{{number}}" placeholder="Введите ваше имя" id="companion-name-{{number}}" required>
+          </div>
+
+          <div class="contest-form__input-wrapper">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="nickname-{{number}}" class="contest-form__label  contest-form__label--top">
+                Прозвище:
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="nickname-{{number}}" placeholder="Ну как же без этого!" id="nickname-{{number}}">
+          </div>
+        </div>
+
+        <div class="contest-form__delete">УДАЛИТЬ</div>
+      </div>
+    </script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/tap.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

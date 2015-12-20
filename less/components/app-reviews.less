@@ -1,147 +1,161 @@
-.app-reviews{
-  background: white;
-  text-align: center;
-  padding: 45px 0 65px 0;
-  margin: 0;
+.app-reviews {
   position: relative;
-  
-  &:after{
-    content: '';
+
+  margin: 0;
+  padding: 45px 0 65px 0;
+
+  text-align: center;
+
+  background: white;
+
+  &:after {
     position: absolute;
     bottom: 0;
     left: 0;
+
     width: 100%;
     height: 33px;
+
+    content: "";
+
     background: linear-gradient(to bottom right, white 50%, @l-grey 50%);
   }
 }
 
-.app-reviews__review{
+.app-reviews__review {
   padding-bottom: 35px;
 }
 
-.app-reviews__user-name{
-  padding-bottom: 15px;
+.app-reviews__user-name {
   margin: 0;
+  padding-bottom: 15px;
 }
 
-.app-reviews__text{
-  padding: 0;
+.app-reviews__text {
   margin: 0;
+  padding: 0;
 }
 
 @media (max-width: @screen-sm) {
-  .app-reviews__about-user{
+  .app-reviews__about-user {
     display: none;
   }
 }
 
 @media (min-width: @screen-sm) {
-  
-  .app-reviews{
+  .app-reviews {
     padding: 75px 0;
-    
-    &:after{
+
+    &:after {
       height: 55px;
     }
   }
-  
-  .app-reviews__review{
+
+  .app-reviews__review {
     display: flex;
     flex-direction: column;
   }
-  
-  .app-reviews__text{
+
+  .app-reviews__text {
     font-size: 18px;
     line-height: 30px;
+
     order: 1;
   }
-  
-  .app-reviews__user-name{
+
+  .app-reviews__user-name {
     padding-top: 35px;
     padding-bottom: 10px;
+
     order: 2;
   }
-  
-  .app-reviews__about-user{
+
+  .app-reviews__about-user {
     margin: 0;
+
     order: 3;
   }
 }
 
 @media (min-width: @screen-lg) {
-  
-  .app-reviews{
+  .app-reviews {
     margin: 0;
     padding-top: 0;
     padding-bottom: 135px;
-    
-    & .slider-tabs{
+
+    & .slider-tabs {
       display: none;
     }
-    
-    &:after{
+
+    &:after {
       height: 90px;
     }
   }
-  
-  .app-reviews__review{
+
+  .app-reviews__review {
     padding: 0;
+
     background-image: url(../img/quotes.svg);
     background-repeat: no-repeat;
-    background-size: 79px 64px;
     background-position: 50% 70px;
+    background-size: 79px 64px;
   }
-  
-  .app-reviews__arrow{
+
+  .app-reviews__arrow {
     position: absolute;
+    top: 212px;
+
     width: 22px;
     height: 42px;
-    top: 212px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+
     cursor: pointer;
-    opacity: .3;
-    
-    &:hover{
+
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &:hover {
       opacity: 1;
     }
-    
-    &:active{
-      opacity: .1;
+
+    &:active {
+      opacity: 0.1;
     }
-    
-    &--left{
+
+    &--left {
       left: 0;
+
       background-image: url(../img/review-arrow-left.svg);
     }
-    
-    &--right{
+
+    &--right {
       right: 0;
+
       background-image: url(../img/review-arrow-right.svg);
     }
   }
-    
-  
-  .app-reviews__text{
-    padding-top: 190px;
+
+
+  .app-reviews__text {
     width: 700px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    padding-top: 190px;
   }
-  
-  .app-reviews__quotes{
+
+  .app-reviews__quotes {
     display: none;
   }
-  
-  .app-reviews__user-name{
+
+  .app-reviews__user-name {
     font-size: 24px;
     line-height: 30px;
+
     padding-bottom: 5px;
   }
-  
-  .app-reviews__about-user{
+
+  .app-reviews__about-user {
     font-size: 18px;
     line-height: 30px;
   }

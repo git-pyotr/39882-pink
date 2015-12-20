@@ -1,65 +1,74 @@
-.photo-preview{
-  position: relative;
-  width: 68px;
-  font-size: 12px;
-  line-height: 20px;
+.photo-preview {
   font-family: @base-font;
+  font-size: 12px;
   font-weight: 400;
-  color: @blue-grey;
-  text-transform: uppercase;
-  text-align: left;
+  line-height: 20px;
+
+  position: relative;
+
+  width: 68px;
   margin: 0 0 20px 36px;
   padding: 0;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  color: @blue-grey;
 }
 
-.photo-preview__icon-close{
+.photo-preview__icon-close {
   position: absolute;
   top: -15px;
   left: 52px;
+
   width: 30px;
   height: 30px;
+
+  cursor: pointer;
+
   border: 2px solid @border-grey;
   border-radius: 50%;
-  background-image: url(../img/cross-grey.svg);
-  background-size: 12px 12px;
-  background-position: center;
   background-color: white;
+  background-image: url(../img/cross-grey.svg);
   background-repeat: no-repeat;
-  cursor: pointer;
-  
-  &:hover{
+  background-position: center;
+  background-size: 12px 12px;
+
+  &:hover {
     border-color: @blue-grey;
     background-image: url(../img/cross.svg);
   }
-  
-  &:active{
+
+  &:active {
     border-color: @blue-grey;
-    background-image: url(../img/cross-white.svg);
     background-color: @blue-grey;
+    background-image: url(../img/cross-white.svg);
   }
 }
 
 @media (min-width: @screen-sm) {
-  .photo-preview{
-    width: 120px;
+  .photo-preview {
     font-size: 14px;
     line-height: 26px;
+
+    width: 120px;
     margin: 0 0 45px 66px;
   }
-  
-  .photo-preview__icon-close{
+
+  .photo-preview__icon-close {
     top: -25px;
     left: 95px;
+
     width: 50px;
     height: 50px;
+
     background-size: 20px 20px;
   }
 }
 
 @media (min-width: @screen-lg) {
-
-  .photo-preview{
-    margin-left: 55px;
+  .photo-preview {
     margin-bottom: 25px;
+    margin-left: 55px;
   }
 }
