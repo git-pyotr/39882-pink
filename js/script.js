@@ -139,7 +139,6 @@
     deleteInput(deleteBtn[deleteBtn.length - 1]);
   });
 
-
 //-----------------------------------------------------------------
 
   if (!("FormData" in window)) {
@@ -173,5 +172,4 @@
 
     xhr.send(data);
   }
-
 }) ();
