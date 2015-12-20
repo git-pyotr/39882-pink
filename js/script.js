@@ -121,8 +121,16 @@
     if (minusBtn[1].classList.contains('contest-form__number-change-btn--disable')) {
       enableBtn(minusBtn[1]);
     }
+//Находим номер попутчика
+    var companionNumber = companionsBlock.lastElementChild.querySelector('.contest-form__companion-number');
 
-    var html = Mustache.render(template, {number: num});
+    if (companionNumber) {
+      companionNumber = parseInt(companionNumber.innerHTML) + 1;
+    } else {
+      companionNumber = num;
+    }
+//
+    var html = Mustache.render(template, {number: companionNumber});
 
     companionsBlock.insertAdjacentHTML('beforeEnd', html);
 
