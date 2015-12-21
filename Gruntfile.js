@@ -112,7 +112,7 @@ module.exports = function(grunt) {
       my_target: {
         files: [{
             expand: true,
-            src: 'js/**/*.js',
+            src: 'build/js/**/*.js',
         }]
       }
     },
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['js/script.js', 'js/map.js', 'js/tap.min.js', 'js/mustache.min.js'],
-        dest: 'build/js/script.js',
+        dest: 'build/js/script.min.js',
       },
   },
 
@@ -162,8 +162,8 @@ module.exports = function(grunt) {
     "postcss",
     "cssmin",
     "htmlmin",
+    "concat",
     "uglify",
-    "concat"
   ])
 
 
