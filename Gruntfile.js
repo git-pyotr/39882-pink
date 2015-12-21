@@ -70,7 +70,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["img/**/*.{png,jpg,gif,svg}"]
+          src: ["build/img/**/*.{png,jpg,gif,svg}"]
         }]
       }
     },
@@ -156,6 +156,7 @@ module.exports = function(grunt) {
   grunt.registerTask("build", [
     "clean",
     "copy",
+    "imagemin",
     "csscomb",
     "less",
     "cmq",
