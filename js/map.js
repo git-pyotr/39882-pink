@@ -5,7 +5,8 @@ ymaps.ready(init);
 function init(){
     myMap = new ymaps.Map(mapContainer, {
       center: [59.938667, 30.323073],
-      zoom: 15
+      zoom: 15,
+      controls: []
     });
 
   myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
@@ -19,4 +20,6 @@ function init(){
   });
 
   myMap.geoObjects.add(myPlacemark);
+  
+  myMap.behaviors.disable('scrollZoom');
 }
