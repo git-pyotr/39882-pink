@@ -3,15 +3,6 @@
   text-align: center;
 }
 
-.page-footer__promo{
-  font-size: @large-font-size;
-  line-height: round((@large-font-size * 1.2));
-  font-weight: 300;
-  padding-bottom: 40px;
-  margin: 0;
-  background: white;
-}
-
 .page-footer__contacts{
   background: white;
   padding-bottom: 20px;
@@ -40,6 +31,15 @@
   }
 }
 
+.page-footer__promo{
+  font-size: @large-font-size;
+  line-height: round((@large-font-size * 1.2));
+  font-weight: 300;
+  padding-bottom: 40px;
+  margin: 0;
+  background: white;
+}
+
 .page-footer__contacts-title{
   padding: 0;
   margin-bottom: 5px;
@@ -57,18 +57,17 @@
 .page-footer__email{
   text-decoration: none;
   color: @pink;
-  
+
   &:hover{
     text-decoration: underline;
     color: @blue-grey;
   }
-  
+
   &:active{
     text-decoration: none;
     color: fade(@blue-grey, 30%);
   }
 }
-
 .map{
   background: url(../img/map.jpg) no-repeat center;
   background-size: cover;
@@ -101,7 +100,7 @@
   .page-footer{
     padding-top: 65px;
   }
-  
+
   .page-footer__promo{
     font-size: 40px;
     line-height: 1.2em;

@@ -157,7 +157,6 @@ module.exports = function(grunt) {
     "clean",
     "copy",
     "imagemin",
-    "csscomb",
     "less",
     "cmq",
     "postcss",
