@@ -1,42 +1,46 @@
-.btn{
-  display: block;
-  width: 100%;
-  font-size: 18px;
-  line-height: 30px;
-  padding: 15px;
+.btn {
   font-family: @base-font;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+
+  display: block;
+
+  width: 100%;
+  padding: 15px;
+
+  cursor: pointer;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
+
   border-radius: 2px;
   outline: none;
-  cursor: pointer;
 
-  &--white{
-    background-color: white;
+  &--white {
     color: @blue-grey;
     border: 2px solid @border-grey;
-    
-    &:hover{
+    background-color: white;
+
+    &:hover {
       border-color: @blue-grey;
     }
-    
-    &:active{
-      background: @blue-grey;
+
+    &:active {
       color: white;
+      background: @blue-grey;
     }
   }
 
-  &--green{
-    background-color: @green;
+  &--green {
     color: white;
     border: none;
-    
-    &:hover{
+    background-color: @green;
+
+    &:hover {
       background: darken(@green, 5%);
     }
-    
-    &:active{
+
+    &:active {
       color: fade(white, 30%);
     }
   }

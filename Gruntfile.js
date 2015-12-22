@@ -6,6 +6,13 @@ module.exports = function(grunt) {
   var config = {
     pkg: grunt.file.readJSON("package.json"),
 
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["less/**/*.less"]
+      }
+    },
+
     less: {
       style: {
         files: {
@@ -36,7 +43,7 @@ module.exports = function(grunt) {
       }
     }
   };
-  
+
 
 
   // Не редактируйте эту строку
