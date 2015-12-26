@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Форма</title>
+  </head>
+  <body>
+    <header class="page-header">
+
+      <nav class="main-menu  main-menu--closed">
+        <div class="container">
+          <a href="index.html" class="logo">PINK</a>
+          <i class="main-menu__icon"></i>
+        </div>
+
+        <ul class="main-menu__list">
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Информация</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Блог</a></li>
+          <li class="main-menu__item"><a href="#" class="main-menu__link">Отзывы</a></li>
+          <li class="main-menu__item"><a href="form.html" class="main-menu__link">Конкурс</a></li>
+        </ul>
+      </nav>
+
+      <div class="page-header__bg-photo">
+        <div class="container">
+          <p class="page-header__slogan">
+            Конкурс на самое безбашеное путешествие с Пинк
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <form class="contest-form" method="post" action="https://echo.htmlacademy.ru/adaptive">
+      <div class="container">
+        <p class="contest-form__description">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          <span class="contest-form__offer">Пожалуйста, заполните форму ниже:</span>
+        </p>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--odd  contest-form__fieldset--name">
+        <div class="container">
+          <div class="contest-form__input-name">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="name" class="contest-form__label  contest-form__label--top">
+                Имя: *
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="name" placeholder="Введите ваше имя" id="name" required>
+          </div>
+
+          <div class="contest-form__input-name">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="surname" class="contest-form__label  contest-form__label--top">
+                Фамилия: *
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="surname" placeholder="Укажите фамилию" id="surname" required>
+          </div>
+
+          <div class="contest-form__input-name">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="patronymic" class="contest-form__label  contest-form__label--top">
+                Отчество:
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="patronymic" placeholder="Ну и отчество тоже" id="patronymic">
+          </div>
+        </div>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--even  contest-form__fieldset--device">
+        <div class="container">
+          <h3 class="contest-form__title  contest-form__title--fieldset-title">С каким приложением путешествовали? *</h3>
+
+          <div class="contest-form__input-device">
+            <input class="radiobutton" type="radio" name="app-version" id="ios" value="ios" checked required>
+            <label class="contest-form__input-description" for="ios">Pink для iOS</label>
+
+            <input class="radiobutton" type="radio" name="app-version" id="android" value="android" required>
+            <label class="contest-form__input-description" for="android">Pink на Android</label>
+
+            <input class="radiobutton" type="radio" name="app-version" id="winphone" value="microsoft" required>
+            <label class="contest-form__input-description" for="winphone">Windows Phone</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--odd  contest-form__fieldset--date">
+        <div class="container">
+          <h3 class="contest-form__title  contest-form__title--fieldset-title">Когда вы путешествовали? *</h3>
+
+          <div class="contest-form__inputs">
+            <div class="contest-form__input-group">
+              <input class="input  input--date" type="text" name="date-departure" value="1 апреля 2015" id="date-departure" required>
+              <h3 class="contest-form__title">
+                <label for="date-departure" class="contest-form__label  contest-form__label--bottom">
+                  Дата выезда
+                </label>
+              </h3>
+            </div>
+
+            <div class="contest-form__input-group">
+              <div class="contest-form__input-number">
+                <div class="contest-form__number-change-btn  contest-form__number-change-btn--minus">-</div>
+                <input class="input  input--number" type="text" name="duration" value="10 дней" id="duration" required>
+                <div class="contest-form__number-change-btn  contest-form__number-change-btn--plus">+</div>
+              </div>
+              <h3 class="contest-form__title">
+                <label for="duration" class="contest-form__label  contest-form__label--bottom">
+                  Продолжительность
+                </label>
+              </h3>
+            </div>
+
+            <div class="contest-form__input-group">
+              <input class="input  input--date" type="text" name="date-arrival" value="1 апреля 2015" id="date-arrival" readonly required>
+              <h3 class="contest-form__title">
+                <label for="date-arrival" class="contest-form__label  contest-form__label--bottom">
+                  Дата возвращения
+                </label>
+              </h3>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--even  contest-form__fieldset--companions">
+        <div class="container">
+          <h3 class="contest-form__title  contest-form__title--fieldset-title">
+            Количество попутчиков *
+          </h3>
+
+          <div class="contest-form__input-number  contest-form__input-number--companion">
+            <div class="contest-form__number-change-btn  contest-form__number-change-btn--minus">-</div>
+            <input class="input  input--number" type="text" name="companions-number" value="2 чел" id="companions-number" readonly required autocomplete="off">
+            <div class="contest-form__number-change-btn  contest-form__number-change-btn--plus">+</div>
+          </div>
+
+          <div class="contest-form__companion-name">
+            <div class="contest-form__companion-number-block">
+              <h3 class="contest-form__title  contest-form__label  contest-form__label--top">№</h3>
+              <div class="contest-form__companion-number">1</div>
+            </div>
+
+            <div class="contest-form__companion-name-block">
+              <div class="contest-form__input-wrapper">
+                <h3 class="contest-form__title  contest-form__title--left-align">
+                  <label for="companion-name-1" class="contest-form__label  contest-form__label--top">
+                    Имя: *
+                  </label>
+                </h3>
+                <input class="input  input--text" type="text" name="companion-name-1" placeholder="Введите ваше имя" id="companion-name-1" required>
+              </div>
+
+              <div class="contest-form__input-wrapper">
+                <h3 class="contest-form__title  contest-form__title--left-align">
+                  <label for="nickname-1" class="contest-form__label  contest-form__label--top">
+                    Прозвище:
+                  </label>
+                </h3>
+                <input class="input  input--text" type="text" name="nickname-1" placeholder="Ну как же без этого!" id="nickname-1">
+              </div>
+            </div>
+
+            <div class="contest-form__delete">УДАЛИТЬ</div>
+          </div>
+
+          <div class="contest-form__companion-name">
+            <div class="contest-form__companion-number-block">
+              <h3 class="contest-form__title  contest-form__label  contest-form__label--top">№</h3>
+              <div class="contest-form__companion-number">2</div>
+            </div>
+
+            <div class="contest-form__companion-name-block">
+              <div class="contest-form__input-wrapper">
+                <h3 class="contest-form__title  contest-form__title--left-align">
+                  <label for="companion-name-2" class="contest-form__label  contest-form__label--top">
+                    Имя: *
+                  </label>
+                </h3>
+                <input class="input  input--text" type="text" name="companion-name-2" placeholder="Введите ваше имя" id="companion-name-2" required>
+              </div>
+
+              <div class="contest-form__input-wrapper">
+                <h3 class="contest-form__title  contest-form__title--left-align">
+                  <label for="nickname-2" class="contest-form__label  contest-form__label--top">
+                    Прозвище:
+                  </label>
+                </h3>
+                <input class="input  input--text" type="text" name="nickname-2" placeholder="Ну как же без этого!" id="nickname-2">
+              </div>
+            </div>
+
+            <div class="contest-form__delete">УДАЛИТЬ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--odd  contest-form__fieldset--achievments">
+        <div class="container">
+          <h3 class="contest-form__title  contest-form__title--fieldset-title">Ваши безбашенные достижения в путешествии</h3>
+
+          <div class="contest-form__iput-achievments">
+            <input class="checkbox" type="checkbox" name="shark" id="shark" value="shark" checked>
+            <label class="contest-form__input-description" for="shark">Сделал селфи с акулой</label>
+
+            <input class="checkbox" type="checkbox" name="beach" id="beach" value="beach" checked>
+            <label class="contest-form__input-description" for="beach">Обгорел на пляже</label>
+
+            <input class="checkbox" type="checkbox" name="chuck" id="chuck" value="chuck">
+            <label class="contest-form__input-description" for="chuck">Видел Чака Норриса</label>
+
+            <input class="checkbox" type="checkbox" name="souvenirs" id="souvenirs" value="souvenirs">
+            <label class="contest-form__input-description" for="souvenirs">Накупил сувениров</label>
+
+            <input class="checkbox" type="checkbox" name="tower" id="tower" value="tower" checked>
+            <label class="contest-form__input-description" for="tower">Удержал башню</label>
+
+            <input class="checkbox" type="checkbox" name="hotel" id="hotel" value="hotel">
+            <label class="contest-form__input-description" for="hotel">Разгромил отель</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--even  contest-form__fieldset--photos">
+        <div class="container">
+          <h3 class="contest-form__title  contest-form__title--fieldset-title">Ваши фотографии из поездки *</h3>
+
+          <button class="btn btn--white" type="button">Загрузить фото</button>
+
+          <hr class="contest-form__separator">
+
+          <div class="contest-form__photo-preview">
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-1.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-1.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-2.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-2.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-3.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-3.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-4.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-4.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-5.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-5.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-6.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-6.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-7.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-7.JPG
+            </div>
+
+            <div class="photo-preview">
+              <i class="photo-preview__icon-close"></i>
+              <img src="img/img-8.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
+              IMG-8.JPG
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contest-form__fieldset  contest-form__fieldset--odd  contest-form__fieldset--submit">
+        <div class="container">
+          <button class="btn btn--green" type="submit">Отправить форму</button>
+
+          <p class="contest-form__footnote"><span class="contest-form__footnote-asterisk">*</span> — обязательные <span class="contest-form__footnote  contest-form__footnote--hide">для заполнения </span>поля</p>
+        </div>
+      </div>
+    </form>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="index.html" class="logo logo--footer">Pink</a>
+
+        <div class="social">
+          <a href="#" class="social-btn  social-btn--twitter">Twitter</a>
+          <a href="#" class="social-btn  social-btn--fb">Facebook</a>
+          <a href="#" class="social-btn  social-btn--youtube">Youtube</a>
+        </div>
+
+        <div class="copyright">
+          Разработано
+          <a href="https://htmlacademy.ru/" class="htmlacademy-icon"></a>
+        </div>
+      </div>
+    </footer>
+
+
+    <script id="companion-name-input" type="text/html">
+      <div class="contest-form__companion-name">
+        <div class="contest-form__companion-number-block">
+          <h3 class="contest-form__title  contest-form__label  contest-form__label--top">№</h3>
+          <div class="contest-form__companion-number">{{number}}</div>
+        </div>
+
+        <div class="contest-form__companion-name-block">
+          <div class="contest-form__input-wrapper">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="companion-name-{{number}}" class="contest-form__label  contest-form__label--top">
+                Имя: *
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="companion-name-{{number}}" placeholder="Введите ваше имя" id="companion-name-{{number}}" required>
+          </div>
+
+          <div class="contest-form__input-wrapper">
+            <h3 class="contest-form__title  contest-form__title--left-align">
+              <label for="nickname-{{number}}" class="contest-form__label  contest-form__label--top">
+                Прозвище:
+              </label>
+            </h3>
+            <input class="input  input--text" type="text" name="nickname-{{number}}" placeholder="Ну как же без этого!" id="nickname-{{number}}">
+          </div>
+        </div>
+
+        <div class="contest-form__delete">УДАЛИТЬ</div>
+      </div>
+    </script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/tap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
