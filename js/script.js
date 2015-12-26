@@ -2,21 +2,13 @@
 
   var menuBtn = document.querySelector('.main-menu__icon');
 
-<<<<<<< HEAD
-  if ( document.querySelector('.contest-form__fieldset--companions') ) {
-=======
   if (document.querySelector('.contest-form')) {
->>>>>>> origin/master
     var minusBtn = document.querySelectorAll('.contest-form__number-change-btn--minus');
     var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
     var deleteBtn = document.querySelectorAll('.contest-form__delete');
     var companionsBlock = document.querySelector('.contest-form__fieldset--companions').firstElementChild;
     var template = document.querySelector('#companion-name-input').innerHTML;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 
   function deleteInput(elem) {
     var parent = elem.parentElement;
@@ -185,9 +177,5 @@
 
     xhr.send(data);
   }
-<<<<<<< HEAD
-}) ();
 
-=======
 })();
->>>>>>> origin/master
