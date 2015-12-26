@@ -1,11 +1,15 @@
 (function() {
 
   var menuBtn = document.querySelector('.main-menu__icon');
-  var minusBtn = document.querySelectorAll('.contest-form__number-change-btn--minus');
-  var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
-  var deleteBtn = document.querySelectorAll('.contest-form__delete');
-  var companionsBlock = document.querySelector('.contest-form__fieldset--companions').firstElementChild;
-  var template = document.querySelector('#companion-name-input').innerHTML;
+
+  if ( document.querySelector('.contest-form__fieldset--companions') ) {
+    var minusBtn = document.querySelectorAll('.contest-form__number-change-btn--minus');
+    var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
+    var deleteBtn = document.querySelectorAll('.contest-form__delete');
+    var companionsBlock = document.querySelector('.contest-form__fieldset--companions').firstElementChild;
+    var template = document.querySelector('#companion-name-input').innerHTML;
+  }
+
 
   function deleteInput(elem) {
     var parent = elem.parentElement;
@@ -173,3 +177,4 @@
     xhr.send(data);
   }
 }) ();
+
