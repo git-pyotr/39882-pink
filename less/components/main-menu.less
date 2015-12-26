@@ -7,12 +7,12 @@
   background: @blue-grey;
   box-shadow: inset 0 -1px darken(@blue-grey, 10%);
   z-index: 100;
-  
+
   &--closed{
     background: rgba(0, 0, 0, .3);
     box-shadow: none;
     height: 66px;
-    
+
     & .main-menu__icon:before{
       content: '';
       position: absolute;
@@ -24,7 +24,7 @@
       background-size: contain;
       cursor: pointer;
     }
-    
+
     & .main-menu__icon:hover:before{
         background-image: url(../img/menu-burger-pink.svg);
       }
@@ -32,7 +32,7 @@
     & .main-menu__icon:active:before{
       opacity: .3;
     }
-    
+
     & .main-menu__list{
       display: none;
     }
@@ -40,7 +40,7 @@
 }
 
 .main-menu__icon{
-  
+
   &:before{
     content: '';
     position: absolute;
@@ -52,7 +52,7 @@
     background-size: contain;
     cursor: pointer;
   }
-  
+
   &:hover:before{
     background-image: url(../img/menu-cross-pink.svg);
   }
@@ -90,11 +90,11 @@
   box-shadow:
     inset 0 1px lighten(@blue-grey, 10%),
     inset 0 -1px darken(@blue-grey, 10%);
-  
+
   &:hover{
     color: @pink;
   }
-  
+
   &:active{
     color: fade(@pink, 30%);
   }
@@ -104,16 +104,16 @@
   .main-menu{
     background: @blue-grey;
     height: 110px;
-  
+
   .main-menu__list{
         margin-top: 110px;
       }
-    
+
   &--closed{
     background: rgba(0, 0, 0, .3);
     box-shadow: none;
   }
-    
+
     & .main-menu__icon:before{
       top: 44px;
     }
@@ -121,9 +121,9 @@
 }
 
 @media (min-width: @screen-lg) {
-  
+
   .main-menu--closed{
-    
+
     .main-menu__list{
       display: flex;
       flex-direction: row;
@@ -133,11 +133,8 @@
       margin: 31px auto;
     }
   }
-  
-  .main-menu__icon{
-    display: none;
-  }
-  
+
+
   .main-menu__link{
     font-size: 18px;
     line-height: 1em;
@@ -148,17 +145,21 @@
     padding-left: 0;
     padding-right: 0;
     margin-left: 70px;
-    
+
     &:hover{
       color: white;
       border-bottom: 2px solid white;
       padding-bottom: 12px;
     }
-    
+
     &:active{
       color: white;
       border: none;
       opacity: .3;
     }
+  }
+
+  .main-menu__icon{
+    display: none;
   }
 }
