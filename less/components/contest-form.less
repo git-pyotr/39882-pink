@@ -98,6 +98,7 @@
 }
 
 .contest-form__number-change-btn {
+  position: relative;
   font-size: 0;
 
   box-sizing: border-box;
@@ -108,12 +109,17 @@
   cursor: pointer;
 
   border: 2px solid @border-grey;
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position: center;
 
   flex-grow: 1;
   flex-shrink: 0;
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -13px;
+  }
 
   &:hover {
     border-color: @blue-grey;
@@ -124,8 +130,11 @@
   }
 
   &--disable {
-    background-image: url(../img/minus.png);
-    background-size: 27px 3px;
+
+    &:after{
+      .sprite(@minus);
+      margin-top: -1px;
+    }
 
     &:hover,
     &:active {
@@ -135,20 +144,26 @@
   }
 
   &--minus {
-    background-image: url(../img/minus.png);
-    background-size: 27px 3px;
 
-    &:active {
-      background-image: url(../img/minus-white.png);
+    &:after{
+      .sprite(@minus);
+      margin-top: -1px;
+    }
+
+    &:active:after {
+      .sprite(@minus-white);
     }
   }
 
   &--plus {
-    background-image: url(../img/plus.png);
-    background-size: 27px 27px;
 
-    &:active {
-      background-image: url(../img/plus-white.png);
+    &:after{
+      .sprite(@plus);
+      margin-top: -13px;
+    }
+
+    &:active:after {
+      .sprite(@plus-white);
     }
   }
 }

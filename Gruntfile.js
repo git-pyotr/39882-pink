@@ -137,7 +137,7 @@ module.exports = function(grunt) {
         src: 'img/sprite/*.png',
         dest: 'img/spritesheet.png',
         destCss: 'less/sprite.less',
-        padding: 50
+        padding: 0
       }
     },
 
