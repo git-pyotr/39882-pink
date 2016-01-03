@@ -5,9 +5,13 @@
   if (document.querySelector('.contest-form')) {
     var minusBtn = document.querySelectorAll('.contest-form__number-change-btn--minus');
     var plusBtn = document.querySelectorAll('.contest-form__number-change-btn--plus');
+    var inputDate = minusBtn[0].nextElementSibling;
+    var inputCompanion = minusBtn[1].nextElementSibling;
     var deleteBtn = document.querySelectorAll('.contest-form__delete');
     var companionsBlock = document.querySelector('.contest-form__fieldset--companions').firstElementChild;
     var template = document.querySelector('#companion-name-input').innerHTML;
+    var dateDeparture = document.querySelector("#date-departure");
+    var dateArrival = document.querySelector("#date-arrival");
   }
 
   function deleteInput(elem) {
@@ -41,6 +45,23 @@
     btn.classList.add('contest-form__number-change-btn--minus');
   }
 
+  function setTravelDuration() {
+    var days = parseInt(inputDate.value, 10);
+    var date = new Date(dateDeparture.value);
+    var formatter = new Intl.DateTimeFormat("ru");
+
+    if (isNaN(days) || days < 0) {
+      disableBtn(minusBtn[0]);
+      inputDate.value = '0 дней';
+      dateArrival.value = formatter.format(date);
+      return;
+    }
+
+    date.setDate(date.getDate() + days);
+
+    dateArrival.value = formatter.format(date);
+  }
+
   //-----------------------------------------------------------------
 
   menuBtn.addEventListener('tap', function (event) {
@@ -51,7 +72,15 @@
 
   //------------------------------------------------------------------
 
-  var inputDate = minusBtn[0].nextElementSibling;
+  dateDeparture.addEventListener('change', function(event) {
+    setTravelDuration();
+  });
+
+  //-----------------------------------------------------------------
+
+  inputDate.addEventListener('change', function(event){
+    setTravelDuration();
+  });
 
 
   minusBtn[0].addEventListener('tap', function (event) {
@@ -59,16 +88,18 @@
 
     var num = parseInt(inputDate.value, 10);
 
-    if (num > 2) {
+    if (num > 1) {
       inputDate.value = --num + declOfNum(num, [' день', ' дня', ' дней']);
 
       if (this.classList.contains('contest-form__number-change-btn--disable')) {
         enableBtn(this);
       }
     } else {
-      inputDate.value = '1 день';
+      inputDate.value = '0 дней';
       disableBtn(this);
     }
+
+    setTravelDuration();
   });
 
   plusBtn[0].addEventListener('tap', function (event) {
@@ -76,21 +107,21 @@
 
     var num = parseInt(inputDate.value, 10);
 
-    if (num >= 1) {
+    if (num >= 0) {
       inputDate.value = ++num + declOfNum(num, [' день', ' дня', ' дней']);
 
       if (minusBtn[0].classList.contains('contest-form__number-change-btn--disable')) {
         enableBtn(minusBtn[0]);
       }
     } else {
-      inputDate.value = '1 день';
+      inputDate.value = '0 дней';
       disableBtn(minusBtn[0]);
     }
+
+    setTravelDuration();
   });
 
   //------------------------------------------------------------------
-
-  var inputCompanion = minusBtn[1].nextElementSibling;
 
   for (var i = 0; i < deleteBtn.length; i++) {
     deleteInput(deleteBtn[i]);
@@ -146,21 +177,39 @@
 
   //-----------------------------------------------------------------
 
-  if (!("FormData" in window)) {
+  if (!("FormData" in window) || !("FileReader" in window)) {
     return;
   }
 
   var form = document.querySelector(".contest-form");
+  var area = form.querySelector(".contest-form__photo-preview");
+  var previewTemplate = document.querySelector("#photo-preview").innerHTML;
+  var queue = [];
+
+  form.querySelector("#photos").addEventListener("change", function() {
+    var files = this.files;
+
+    for (var i = 0; i < files.length; i++) {
+      preview(files[i]);
+    }
+
+    this.value = "";
+  });
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     var data = new FormData(form);
 
+    queue.forEach(function(element) {
+      data.append("images", element.file);
+    });
+
     request(data, function (response) {
       console.log(response);
     });
   });
+
 
   function request(data, fn) {
     var xhr = new XMLHttpRequest();
@@ -178,4 +227,47 @@
     xhr.send(data);
   }
 
+  function preview(file) {
+    if (file.type.match(/image.*/)) {
+    var reader = new FileReader();
+
+    reader.addEventListener("load", function(event) {
+      var html = Mustache.render(previewTemplate, {
+        "image": event.target.result,
+        "name": file.name
+      });
+
+      var div = document.createElement("div");
+      div.classList.add("photo-preview");
+      div.innerHTML = html;
+
+      area.appendChild(div);
+
+      div.querySelector(".photo-preview__icon-close").addEventListener("tap", function(event) {
+        event.preventDefault();
+        removePreview(div);
+      });
+
+      queue.push({
+        file: file,
+        div: div
+      });
+
+    });
+
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function removePreview(div) {
+
+    queue = queue.filter(function(element) {
+      return element.div != div;
+    });
+
+    div.parentNode.removeChild(div);
+  }
+
 })();
+
+

@@ -95,7 +95,7 @@
 
           <div class="contest-form__inputs">
             <div class="contest-form__input-group">
-              <input class="input  input--date" type="text" name="date-departure" value="1 апреля 2015" id="date-departure" required>
+              <input class="input  input--date" type="date" name="date-departure" value="2015-04-01" id="date-departure" required>
               <h3 class="contest-form__title">
                 <label for="date-departure" class="contest-form__label  contest-form__label--bottom">
                   Дата выезда
@@ -117,7 +117,7 @@
             </div>
 
             <div class="contest-form__input-group">
-              <input class="input  input--date" type="text" name="date-arrival" value="1 апреля 2015" id="date-arrival" readonly required>
+              <input class="input  input--date" type="text" name="date-arrival" value="11.04.2015" id="date-arrival" readonly required>
               <h3 class="contest-form__title">
                 <label for="date-arrival" class="contest-form__label  contest-form__label--bottom">
                   Дата возвращения
@@ -230,58 +230,15 @@
         <div class="container">
           <h3 class="contest-form__title  contest-form__title--fieldset-title">Ваши фотографии из поездки *</h3>
 
-          <button class="btn btn--white" type="button">Загрузить фото</button>
+          <label class="btn btn--white">
+            <input type="file" name="photos" id="photos" multiple hidden>
+            Загрузить фото
+          </label>
 
           <hr class="contest-form__separator">
 
           <div class="contest-form__photo-preview">
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-1.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-1.JPG
-            </div>
 
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-2.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-2.JPG
-            </div>
-
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-3.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-3.JPG
-            </div>
-
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-4.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-4.JPG
-            </div>
-
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-5.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-5.JPG
-            </div>
-
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-6.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-6.JPG
-            </div>
-
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-7.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-7.JPG
-            </div>
-
-            <div class="photo-preview">
-              <i class="photo-preview__icon-close"></i>
-              <img src="img/img-8.jpg" class="photo-preview__image" width="100%" height="auto" alt="Фото">
-              IMG-8.JPG
-            </div>
           </div>
         </div>
       </div>
@@ -342,6 +299,11 @@
 
         <div class="contest-form__delete">УДАЛИТЬ</div>
       </div>
+    </script>
+    <script  id="photo-preview" type="text/html">
+        <i class="photo-preview__icon-close"></i>
+        <img src="{{image}}" class="photo-preview__image" width="100%" height="auto" alt="{{name}}" title="{{name}}">
+        {{name}}
     </script>
     <script src="js/mustache.min.js"></script>
     <script src="js/tap.min.js"></script>
